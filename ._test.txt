@@ -1,0 +1,44 @@
+from upload logo
+
+
+
+/*
+
+	require("conn.php");
+
+	$file = $_FILES['logo'];
+	$fileName = $_FILES['logo']['name'];
+	$fileTmpName = $_FILES['logo']['tmp_name'];
+	$fileSize = $_FILES['logo']['size'];
+	$fileError = $_FILES['logo']['error'];
+	$fileType = $_FILES['logo']['type'];
+
+	$fileExt = explode('.', $fileName);
+	$fileActualExt = strtolower(end($fileExt));
+
+	$allowed = array('jpg', 'jpeg', 'png', 'gif', 'svg', 'tiff');
+
+	if (in_array($fileActualExt, $allowed)) {
+		if ($fileError === 0){
+			if ($fileSize < 5000000){
+				$fileNameNew = uniqid('',true).".".$fileActualExt;
+				$fileDestination = 'logo/'.$fileNameNew;
+				move_uploaded_file($fileTmpName, $fileDestination);
+
+				$querylogo = "UPDATE `vendor_info` SET `logo`= '$fileDestination' WHERE `vendor_info`.`id` = '$vendorid' ";
+
+				if(mysqli_query($conn,$querylogo) or die (mysqli_error())){
+					echo "image input sucessful";
+				}
+
+			}else{
+				echo "your file was too big";
+			}
+
+		}else{
+			echo "there was an error uploading your file";
+		}
+	 } else {
+	 	echo "you cannot upload files of this type";
+	 }
+*/
