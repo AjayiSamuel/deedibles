@@ -9,7 +9,7 @@ if(!isset($_SESSION['id']))
 else
 {
 	$vendorid = $_SESSION['id'];
-	$vendorusername = $_SESSION['name'];
+	
 	
 
 	$conn = mysqli_connect("localhost","root","","vendordb");
@@ -32,30 +32,24 @@ else
 	}
 }
 ?>
-
 <!DOCTYPE html>
-<html>
-<head>
-	<title> Vendor Profile</title>
-</head>
-<body>
-	<h3>
-		Welcome <?php echo "$vendorusername";?>
-	</h3>
-
-	<p>
-		<?php
-			echo " $vendorusername's session <br> <a href='vendor_logout.php'>Logout</a> <br> ";
-		?>
-	</p>
-
-	<div>
-		<?php
-			echo "$companyName <br> $phoneNo <br>";
-			echo $logo."<br>";
-		?>
-		<img src="<?php echo $logo?>" alt="mylogo">
-	</div>
-
+<html lang="en">
+  <head>
+    
+    <title></title>
+    <meta charset="UTF-8">
+  <?php
+  include 'layouts/head.php';
+  ?>
+  </head>
+  <body>
+    <div class="mv-site">
+      <?php
+include 'layouts/header.php';
+      ?>
+	
+<?php
+include 'layouts/footer.php';
+?>
 </body>
 </html>

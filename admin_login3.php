@@ -4,7 +4,7 @@ session_start();
 $error='';
 
 if ($_POST) {
-	$_SESSION['name']=$_POST['name'];
+	$_SESSION['username']=$_POST['name'];
 	$_SESSION['password']=$_POST['password'];
 
 	//establishing connection with server
@@ -14,7 +14,7 @@ if ($_POST) {
 	$db = mysqli_select_db($conn,"vendor");
 
 	//sql query to fetch information of registered admin
-	$query = mysqli_query ($conn, "SELECT * FROM admininfo WHERE username='".$_SESSION['name']."' AND password ='".$_SESSION['password']."'");
+	$query = mysqli_query ($conn, "SELECT * FROM admininfo WHERE username='".$_SESSION['username']."' AND password ='".$_SESSION['password']."'");
 
 	$result=mysqli_query($conn,$query);
 	

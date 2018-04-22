@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -26,7 +25,7 @@ if ($_POST)
 	$vendorpassword=$_POST['password'];
 	$vendorconfirmpassword=$_POST['confirmpassword'];
 
-	$_SESSION['name'] = $vendorusername;
+	$_SESSION['username'] = $vendorusername;
 	
 	//echo $vendorusername,"<br>";
 	//echo $vendoremail,"<br>";

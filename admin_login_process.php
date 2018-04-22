@@ -8,7 +8,7 @@ $dbname = "vendordb";
 $error="";
 
 if ($_POST) {
-	$_SESSION['name']=$_POST['name'];
+	$_SESSION['username']=$_POST['name'];
 	$_SESSION['password']=$_POST['password'];
 
 	$adminname = $_POST['name'];

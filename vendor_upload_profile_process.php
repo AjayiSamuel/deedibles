@@ -9,7 +9,7 @@ if(!isset($_SESSION['id']))
 else
 {
 	$vendorid = $_SESSION['id'];
-	$vendorusername = $_SESSION['name'];
+	$vendorusername = $_SESSION['username'];
 
 	$servername = "localhost";
 	$username = "root";

@@ -1,14 +1,14 @@
 <?php 
 session_start();
 
-if(!isset($_SESSION['name']))
+if(!isset($_SESSION['username']))
 {
 	header("Location:admin_login.php");
 	exit;
 }
 else
 {
-	$adminname = $_SESSION['name'];
+	$adminname = $_SESSION['username'];
 	echo " $adminname's session <br /> <a href='admin_logout.php'>Logout</a> <br> ";
 }
 ?>
