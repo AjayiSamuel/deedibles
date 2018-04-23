@@ -20,10 +20,10 @@ if ($_POST)
 {
 	
 	$status = "Post validation succcess... <br>";
-	$vendorusername=$_POST['username'];
-	$vendoremail=$_POST['email'];
-	$vendorpassword=$_POST['password'];
-	$vendorconfirmpassword=$_POST['confirmpassword'];
+	$vendorusername=$_POST['reg_username'];
+	$vendoremail=$_POST['reg_email'];
+	$vendorpassword=$_POST['reg_password'];
+	$vendorconfirmpassword=$_POST['reg_confirmpassword']; 
 
 	$_SESSION['username'] = $vendorusername;
 	

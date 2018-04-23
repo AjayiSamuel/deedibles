@@ -60,14 +60,14 @@ session_start();
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Email</strong></div>
                       <div class="mv-field">
-                        <input type="email" name="email" placeholder="enter your email" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input type="email" name="login_email" placeholder="enter your email" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Password</strong></div>
                       <div class="mv-field">
-                        <input type="password" name="password" placeholder="enter your password" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input type="password" name="login_password" placeholder="enter your password" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
@@ -101,7 +101,7 @@ session_start();
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Username</strong></div>
                       <div class="mv-field">
-                        <input name ="username" type="text" value="<?php $vendorusername ?>" placeholder="Enter your username (E.g 'AjayiSamuel')" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input name ="reg_username" type="text" value="" placeholder="Enter your username (E.g 'AjayiSamuel')" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
@@ -109,21 +109,21 @@ session_start();
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Email</strong></div>
                       <div class="mv-field">
-                        <input type="email" value="<?php $vendoremail ?>" placeholder="enter your email" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input name="reg_email" type="email" value="" placeholder="enter your email" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Password</strong></div>
                       <div class="mv-field">
-                        <input type="password" value="<?php $vendorpassword?>" placeholder="enter password" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input name="reg_password" type="password" value="" placeholder="enter password" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Confirm Password</strong></div>
                       <div class="mv-field">
-                        <input type="password" name="test127" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input name="reg_confirmpassword" type="password" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 

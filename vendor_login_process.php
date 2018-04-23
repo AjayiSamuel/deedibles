@@ -4,8 +4,8 @@ session_start();
 $error="";
 if(isset($_POST['submit_login'])){
 	//echo "passed <br>";
-	$email=$_POST['email'];
-	$password=$_POST['password'];
+	$email=$_POST['login_email'];
+	$password=$_POST['login_password'];
 	$conn = mysqli_connect("localhost","root","","vendordb");
 
 	$query = mysqli_query($conn, "SELECT * FROM vendor_info WHERE vendor_email='$email' AND vendor_password='$password'");
