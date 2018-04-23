@@ -36,7 +36,6 @@
                           </div>
                         </div>
                       </div>
-                      <div class="item-button mv-btn"><a href="checkout.html" class="item-button mv-btn mv-btn-style-12"> <i class="btn-icon fa fa-shopping-cart hidden-md hidden-lg"></i><span class="btn-text hidden-xs hidden-sm">checkout</span></a></div>
                     </div>
                   </div>
                 </div>

@@ -2,16 +2,14 @@
                 <div class="header-search">
                   <div class="item-button">
                     <button type="button" data-toggle="modal" data-target="#popupSearch" class="mv-btn mv-btn-style-10 btn-open-field-search"><i class="fa fa-search"></i></button>
-                    <button type="button" class="mv-btn mv-btn-style-10 btn-open-filter click-btn-off-canvas-right hidden-md hidden-lg"><i class="fa fa-filter mv-f-18"></i></button>
                   </div>
                 </div>
                 <!-- .header-search-->
 
                 <div class="header-shop">
-                  <div class="item-button"><a href="wishlist.html" class="mv-btn mv-btn-style-11 btn-my-wishlist"><span class="btn-inner"><span class="icon fa fa-heart-o"></span><span class="number">8</span></span></a></div>
+                 
 
                   <div class="item-button dropdown mv-dropdown-style-1 script-dropdown-1">
-                    <button type="button" class="mv-btn mv-btn-style-11 btn-dropdown btn-my-cart"><span class="btn-inner"><span class="icon fa fa-shopping-bag"></span><span class="number">3</span></span></button>
                     <div class="dropdown-menu pull-right">
                       <div class="dropdown-menu-inner">
                         <div class="mv-block-style-39">
