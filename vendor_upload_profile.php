@@ -140,16 +140,6 @@ include 'layouts/header.php';
         </div>
       </section>
 
-<form method="POST" action="" enctype="multipart/form-data">
-	
-	<!--Error Notice -->
-	<span><?php echo "$logoError";?></span>
-
-	<br>
-	<input type="text" name ="address" placeholder="enter company address" required>
-	<br>
-	<input type="submit" value="Upload" name="submit">
-</form>
 <?php
 include 'layouts/footer.php';
 ?>

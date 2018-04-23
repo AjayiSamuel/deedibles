@@ -7,15 +7,19 @@ session_start();
     
     <title></title>
     <meta charset="UTF-8">
+
+    <!--Including links -->
   <?php
   include 'layouts/head.php';
   ?>
   </head>
   <body>
     <div class="mv-site">
+    <!--Including header-->
       <?php
 include 'layouts/header.php';
       ?>
+      <!--Sliding section begins-->
       <section class="home-1-slideshow mv-wrap">
         <div id="home-1-slideshow" class="mv-caroufredsel">
           <ul class="mv-slider-wrapper">

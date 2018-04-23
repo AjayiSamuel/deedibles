@@ -1,0 +1,9 @@
+from vendor_upload_profile.php
+
+<form method="POST" action="" enctype="multipart/form-data">
+	
+	<!--Error Notice -->
+	<span><?php echo "$logoError";?></span>
+
+	<input type="submit" value="Upload" name="submit">
+</form>

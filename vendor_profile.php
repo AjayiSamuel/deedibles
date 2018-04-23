@@ -35,21 +35,27 @@ else
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
-    <title></title>
+    <title>
+
+	</title>
     <meta charset="UTF-8">
-  <?php
-  include 'layouts/head.php';
-  ?>
+	<?php
+		include 'layouts/head.php';
+	?>
   </head>
   <body>
     <div class="mv-site">
-      <?php
-include 'layouts/header.php';
-      ?>
-	
-<?php
-include 'layouts/footer.php';
-?>
+		<?php
+			include 'layouts/header.php';
+		?>
+
+		<?php
+			include 'layouts/profile_view.php'
+		?>
+
+		<?php
+		include 'layouts/footer.php';
+		?>
+	</div>
 </body>
 </html>
