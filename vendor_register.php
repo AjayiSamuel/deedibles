@@ -114,21 +114,21 @@ session_start();
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Email</strong></div>
                       <div class="mv-field">
-                        <input type="email" value="<?php $vendoremail ?>" placeholder="enter your email" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input name ="email" type="email" value="<?php $vendoremail ?>" placeholder="enter your email" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Password</strong></div>
                       <div class="mv-field">
-                        <input type="password" value="<?php $vendorpassword?>" placeholder="enter password" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input name ="password" type="password" value="<?php $vendorpassword?>" placeholder="enter password" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Confirm Password</strong></div>
                       <div class="mv-field">
-                        <input type="password" name="test127" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input name="confirmpassword" type="password" name ="" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 

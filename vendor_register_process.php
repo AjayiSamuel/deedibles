@@ -73,7 +73,7 @@ if ($_POST)
 			$emailcheck = mysqli_num_rows($sqlemail);
 			if($emailcheck >= 1)
 			{
-				$emailerror = " '$vendoremail' has been used by another user"; 
+				$emailerror = "$vendoremail has been used by another user"; 
 				echo $emailerror;
 			}
 			else
