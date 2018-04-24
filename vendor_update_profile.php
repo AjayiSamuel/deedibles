@@ -9,9 +9,8 @@ if(!isset($_SESSION['id']))
 else
 {
 	$vendorid = $_SESSION['id'];
+	$vendorusername = $_SESSION['username'];
 	
-	
-
 	$conn = mysqli_connect("localhost","root","","vendordb");
 	$query = "SELECT * FROM vendor_info WHERE id = '$vendorid'";
 
