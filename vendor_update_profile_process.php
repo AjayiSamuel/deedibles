@@ -7,14 +7,15 @@ if(!isset($_SESSION['id']))
 }
 else
 {
+	//Session variables
 	$vendorid = $_SESSION['id'];
 	$vendorusername = $_SESSION['username'];
-
+	//sql connection variables
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
 	$dbname = "vendordb";
-
+	//log variables
 	$logoError = "";
 	$logoStatus = "";
 
@@ -30,10 +31,8 @@ else
 		$vendorDate = date("d-m-Y");
 		//$vendorTime = date("h:i:sa");
 		$vendorAddress = $_POST['address'];
-
+		//checking date (To be deleted later)
 		echo "$vendorDate";
-
-
 
 		//connecting to the database
 		$conn = mysqli_connect($servername, $username, $password, $dbname);
