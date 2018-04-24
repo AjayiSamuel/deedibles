@@ -53,7 +53,7 @@ else
 			exit;
 		}
 
-		$updateinput = "UPDATE `vendor_info` SET `company_name`= '$vendorCompanyname', `phone_number`='$vendorPhoneNumber',`company_description`='$vendordescription',`facebook_link`='$vendorFacebookLink',`instagram_link`='$vendorInstagramLink',`category`='$vendorCategory',`address`='',`date`='$vendorDate' , `logo` = '$target_dir' WHERE `vendor_info`.`id` = '$vendorid' ";
+		$updateinput = "UPDATE `vendor_info` SET `company_name`= '$vendorCompanyname', `phone_number`='$vendorPhoneNumber',`company_description`='$vendordescription',`facebook_link`='$vendorFacebookLink',`instagram_link`='$vendorInstagramLink',`category`='$vendorCategory',`address`='$vendorAddress',`date`='$vendorDate' , `logo` = '$target_dir' WHERE `vendor_info`.`id` = '$vendorid' ";
 
 		//section for uploading logo and images
 

@@ -43,7 +43,7 @@ else
 
 
 <?php 
-	include("vendor_upload_profile_process.php");
+	include("vendor_update_profile_process.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,12 +65,12 @@ include 'layouts/header.php';
           <div class="row">
             <div class="col-sm-6 col-register" style="margin-left:auto;margin-right:auto;float:none;">
               <div class="mv-form-style-1 mv-box-shadow-gray-1">
-                <form method="POST" class="form-register" action="vendor_register_process.php">
+                <form method="POST" class="form-register" action="vendor_update_profile_process.php">
                   <div class="form-header">
                     <div class="mv-title-style-13">
 					<div class="text-main">
 					<h3>
-	Welcome <span style="font-weight:900;"><?php echo "$vendorusername" ; ?></span>
+	Profile: <span style="font-weight:900;"><?php echo "$vendorusername" ; ?></span>
 </h3>
 </div>           
                       <div class="text-sub"> Update your company details below:</div>
@@ -82,7 +82,7 @@ include 'layouts/header.php';
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Company Name</strong></div>
                       <div class="mv-field">
-					  <input name="companyname" type="text" value="<?php echo $vendorusername?>" class="mv-inputbox mv-inputbox-style-1" required>
+					  <input name="companyname" type="text" value="<?php echo $companyName?>" class="mv-inputbox mv-inputbox-style-1" required>
                       </div>
 					</div>
 
@@ -120,61 +120,61 @@ include 'layouts/header.php';
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">category</strong></div>
                       <div class="mv-field">
-											<select name="category" placeholder="select your category">
-											
-		<option value="<?php echo $category?>"><?php echo $category?></option>
-		<option value="cake">cake</option>
-		<option value="chocolate">chocolate</option>
-		<option value="cocktail">cocktail</option>
-		<option value="cupcake">cupcake</option>
-		<option value="dessert">dessert</option>
-		<option value="edible arrangement">edible arrangement</option>
-		<option value="edible underwear">edible underwear</option>
-		<option value="fruit trees">Fruit trees</option>
-		<option value="gift basket">Gift basket</option>
-		<option value="ice Cream bar">Ice Cream bar</option>
-		<option value="small chops">small chops</option>
-		<option value="snacks">snacks</option>
-	</select>
+						<select name="category" placeholder="select your category">									
+							<option value="<?php echo $category?>"><?php echo $category?></option>
+							<option value="cake">cake</option>
+							<option value="chocolate">chocolate</option>
+							<option value="cocktail">cocktail</option>
+							<option value="cupcake">cupcake</option>
+							<option value="dessert">dessert</option>
+							<option value="edible arrangement">edible arrangement</option>
+							<option value="edible underwear">edible underwear</option>
+							<option value="fruit trees">Fruit trees</option>
+							<option value="gift basket">Gift basket</option>
+							<option value="ice Cream bar">Ice Cream bar</option>
+							<option value="small chops">small chops</option>
+							<option value="snacks">snacks</option>
+						</select>
                       </div>
 					</div>
 
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Upload Logo</strong></div>
                       <div class="mv-field">
-											<input type="file" name="logo" placeholder="upload your company logo" required><span><?php echo "$logoError";?></span>
+							<input type="file" name="logo" placeholder="upload your company logo" required><span><?php echo "$logoError";?></span>
                       </div>
 					</div>
 
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">First Image</strong></div>
                       <div class="mv-field">
-											<input type="file" name="imageone" placeholder="upload first image" required>          </div>
+						<input type="file" name="imageone" value="<?php echo $firstImg?>" required>          
+					  </div>
 					</div>
 
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Second Image</strong></div>
                       <div class="mv-field">
-											<input type="file" name="imagetwo" placeholder="upload second image " required>
+						<input type="file" name="imagetwo" placeholder="upload second image " required>
                       </div>
 					</div>
 
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Third Image</strong></div>
                       <div class="mv-field">
-											<input type="file" name="imagethree" placeholder="upload third image " required>
+						<input type="file" name="imagethree" placeholder="upload third image " required>
                       </div>
 					</div>
 
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Enter Address</strong></div>
                       <div class="mv-field">
-					  <input name="address" type="text" placeholder="enter company address" class="mv-inputbox mv-inputbox-style-1" required>
+					  <input name="address" type="text" value="<?php echo $address?>" class="mv-inputbox mv-inputbox-style-1" required>
                       </div>
 					</div>
 
                     <div class="mv-form-group submit-button mv-mt-30">
-                      <button type="submit" class="mv-btn mv-btn-style-5 btn-signup">sign up</button>
+                      <button type="submit" class="mv-btn mv-btn-style-5 btn-signup">Update</button>
                     </div>
                   </div>
                   <!-- .form-body-->

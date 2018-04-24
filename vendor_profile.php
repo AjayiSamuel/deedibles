@@ -27,8 +27,14 @@ else
 		$companyName = $row['company_name'];
 		$phoneNo = $row['phone_number'];
 		$description = $row['company_description'];
-		$logo = $row['logo']; 
-
+		$logo = $row['logo'];  
+		$fbLink = $row['facebook_link'];
+		$igLink = $row['instagram_link'];
+		$firstImg = $row['image1'];
+		$secondImg = $row['image2'];
+		$thridImg = $row['image3'];
+		$category = $row['category'];
+		$address = $row['address'];
 	}
 }
 ?>

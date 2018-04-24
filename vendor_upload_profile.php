@@ -84,9 +84,9 @@ include 'layouts/header.php';
 		<option value="dessert">dessert</option>
 		<option value="edible arrangement">edible arrangement</option>
 		<option value="edible underwear">edible underwear</option>
-		<option value="fruit trees">Fruit trees</option>
-		<option value="gift basket">Gift basket</option>
-		<option value="ice Cream bar">Ice Cream bar</option>
+		<option value="fruit trees">fruit trees</option>
+		<option value="gift basket">gift basket</option>
+		<option value="ice cream bar">ice cream bar</option>
 		<option value="small chops">small chops</option>
 		<option value="snacks">snacks</option>
 	</select>

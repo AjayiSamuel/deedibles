@@ -5,7 +5,7 @@ $username = "root";
 $password = "";
 $dbname = "vendordb";
 
-
+//declaring log variables
 $passworderror = "";
 $passwordstatus = "";
 $databaseerror = "";
@@ -13,7 +13,6 @@ $databasestatus = "";
 $usernameerror = "";
 $emailerror = "";
 $error="";
-
 $status= "";
 
 if ($_POST)

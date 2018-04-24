@@ -15,7 +15,7 @@
             <ul class="breadcrumb-1-list">
               <li><a href="home.html"><i class="fa fa-home"></i></a></li>
               <li><a href="product-grid-3.html">Product</a></li>
-              <li><a>Product detail</a></li>
+              <li><a> Vendor Profile</a></li>
             </ul>
           </div>
         </div>
@@ -156,35 +156,26 @@
                   <div class="mv-col-right block-27-col-info">
                     <div class="col-info-inner">
                       <div class="block-27-info">
-                        <div class="block-27-title">Product Name</div>
+                        <div class="block-27-title">Company Name: <?php echo $companyName?></div>
 
                         
 
                         <div class="block-27-price">
-                          <div class="new-price">115,00</div>
+                          <div class="new-price">Phone No: <?php echo $phoneNo?> </div>
                         </div>
 
-                        <div class="block-27-desc">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc finibus sit amet ligula id gravida. Curabitur quis orci non leo varius dapibus in ornare tortor.</div>
+                        <div class="block-27-desc">Short Description: <p> <?php echo $description?> </p></div>
 
                         <div class="block-27-table-info">
                           <form method="GET">
                             <table>
                               
-                              
-                              <tr>
-                                <td>Quantity:</td>
-                                <td>
-                                  <div class="mv-spinner-style-1 input-quantity-wrapper">
-                                    <input type="text" name="test138" value="1" class="mv-inputbox mv-only-numeric input-quantity-product-detail"/>
-                                  </div>
-                                </td>
-                              </tr>
                               <tr>
                                 <td>Categories:</td>
                                 <td>
                                   <div class="mv-list-inline-style-2">
                                     <ul class="list-inline-2">
-                                      <li class="active"><a href="#" class="mv-btn">Women Shirts</a></li>
+                                      <li class="active"><a href="#" class="mv-btn"><?php echo $category?></a></li>
                                       
                                     </ul>
                                   </div>
@@ -208,8 +199,9 @@
                         <div class="mv-dp-table-cell">
                           <div class="mv-btn-group text-left">
                             <div class="group-inner">
-                              <button type="button" class="mv-btn mv-btn-style-1 btn-1-h-50 responsive-btn-1-type-3 btn-add-to-cart"><span class="btn-inner"><i class="btn-icon fa fa-cart-plus"></i><span class="btn-text">add to cart</span></span></button>
-                             
+                                <a href="vendor_update_profile.php">
+                              <button type="button" class="mv-btn mv-btn-style-1 btn-1-h-50 responsive-btn-1-type-3 btn-add-to-cart"><span class="btn-inner"></i><span class="btn-text">Update details</span></span></button>
+                                </a>
                             </div>
                           </div>
                         </div>
