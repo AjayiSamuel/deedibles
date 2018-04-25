@@ -1,9 +1,12 @@
 <?php
+session_start();
+
+$vendorid = $_SESSION['id'];
+echo "<br> My id is $vendorid" ;
 
 if(!isset($_SESSION['id']))
 {
 	echo "Your need to login to use this page";
-	header("Location:index.php");
 }
 else
 {

@@ -1,5 +1,9 @@
+<?php 
+	include("vendor_update_profile_process.php");
+?>
+
 <?php
-session_start();
+
 
 if(!isset($_SESSION['id']))
 {
@@ -41,9 +45,7 @@ else
 ?>
 
 
-<?php 
-	include("vendor_update_profile_process.php");
-?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -64,7 +66,7 @@ include 'layouts/header.php';
           <div class="row">
             <div class="col-sm-6 col-register" style="margin-left:auto;margin-right:auto;float:none;">
               <div class="mv-form-style-1 mv-box-shadow-gray-1">
-                <form method="POST" class="form-register" action="vendor_update_profile_process.php">
+                <form method="POST" class="form-register" action="">
                   <div class="form-header">
                     <div class="mv-title-style-13">
 					<div class="text-main">
@@ -191,9 +193,10 @@ include 'layouts/footer.php';
 </body>
 </html>
 
-
+<!--
 <h3>Update your profile below</h3>
 <form method="POST" action="vendor_update_profile_process.php">
 
 	<input type="submit" value="update" name="submit">
 </form>
+-->

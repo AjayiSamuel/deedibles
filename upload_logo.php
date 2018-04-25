@@ -2,6 +2,13 @@
 		$logoError = "NULL";
 	 	$logoStatus = "NULL";
 
+
+		//check if image is available
+		if(isset($_FILES['logo'])){
+			echo $_FILES['logo']['tmp_name'];
+		}else{
+			echo "image is missing";
+		}
 		$target_dir = "logofolder/";
 		//print_r($_FILES);
 		$target_file = $target_dir . basename($_FILES["logo"]["name"]);
