@@ -1,6 +1,8 @@
 <?php
 
-session_start();
+require '../../vendor/autoload.php';
+use App\Sessions;
+Sessions::init();
 $servername = "localhost";
 $username = "root";
 $password = "";

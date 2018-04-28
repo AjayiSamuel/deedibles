@@ -1,33 +1,32 @@
 <?php
-session_start();
+require '../../vendor/autoload.php';
 
-if(!isset($_SESSION['id']))
-{
+use App\Sessions;
+use App\Database as DB;
+
+Sessions::init();
+if (!isset($_SESSION['id'])) {
 	echo "You need to be logged in to view this page";
 	exit;
-}
-else
-{
+} else {
 	$vendorid = $_SESSION['id'];
-	
-	
 
-	$conn = mysqli_connect("localhost","root","","vendordb");
+
+	$conn = DB::_db();
 	$query = "SELECT * FROM vendor_info WHERE id = '$vendorid'";
 
-	if (!$conn) 
-		{
-			$databaseerror = "could not connect to database";
-    		die("Connection failed: " . mysqli_connect_error($conn));
-		}
+	if (!$conn) {
+		$databaseerror = "could not connect to database";
+		die("Connection failed: " . mysqli_connect_error($conn));
+	}
 
-		$result = mysqli_query($conn,$query);
+	$result = mysqli_query($conn, $query);
 	if ($result) {
 		$row = mysqli_fetch_assoc($result);
 		$companyName = $row['company_name'];
 		$phoneNo = $row['phone_number'];
 		$description = $row['company_description'];
-		$logo = $row['logo'];  
+		$logo = $row['logo'];
 		$fbLink = $row['facebook_link'];
 		$igLink = $row['instagram_link'];
 		$firstImg = $row['image1'];
@@ -40,28 +39,28 @@ else
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>
+<head>
+	<title>
 
 	</title>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<?php
-		include 'layouts/head.php';
+	include 'layouts/head.php';
 	?>
-  </head>
-  <body>
-    <div class="mv-site">
-		<?php
-			include 'layouts/header.php';
-		?>
+</head>
+<body>
+<div class="mv-site">
+	<?php
+	include 'layouts/header.php';
+	?>
 
-		<?php
-			include 'layouts/profile_view.php'
-		?>
+	<?php
+	include 'layouts/profile_view.php'
+	?>
 
-		<?php
-		include 'layouts/footer.php';
-		?>
-	</div>
+	<?php
+	include 'layouts/footer.php';
+	?>
+</div>
 </body>
 </html>

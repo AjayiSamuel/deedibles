@@ -1,4 +1,6 @@
-<?php 
+<?php
+require './vendor/autoload.php';
+use App\Database as DB;
 	include("vendor_update_profile_process.php");
 ?>
 
@@ -15,7 +17,7 @@ else
 	$vendorid = $_SESSION['id'];
 	$vendorusername = $_SESSION['username'];
 	
-	$conn = mysqli_connect("localhost","root","","vendordb");
+	$conn = DB::_db();
 	$query = "SELECT * FROM vendor_info WHERE id = '$vendorid'";
 
 	if (!$conn) 
@@ -66,7 +68,7 @@ include 'layouts/header.php';
           <div class="row">
             <div class="col-sm-6 col-register" style="margin-left:auto;margin-right:auto;float:none;">
               <div class="mv-form-style-1 mv-box-shadow-gray-1">
-                <form method="POST" class="form-register" action="">
+                <form method="POST" class="form-register" action="" enctype="multipart/form-data">
                   <div class="form-header">
                     <div class="mv-title-style-13">
 					<div class="text-main">
@@ -121,7 +123,7 @@ include 'layouts/header.php';
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">category</strong></div>
                       <div class="mv-field">
-						<select name="category" placeholder="select your category">									
+						<select name="category" placeholder="select your category" class="mv-select mv-select-style-1">
 							<option value="<?php echo $category?>"><?php echo $category?></option>
 							<option value="cake">cake</option>
 							<option value="chocolate">chocolate</option>
@@ -142,7 +144,7 @@ include 'layouts/header.php';
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Upload Logo</strong></div>
                       <div class="mv-field">
-							<input type="file" name="logo" placeholder="upload your company logo" required><span><?php echo "$logoError";?></span>
+							<input type="file" name="logo" placeholder="upload your company logo" class="" required><span><?php echo "$logoError";?></span>
                       </div>
 					</div>
 

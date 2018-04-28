@@ -1,26 +1,27 @@
 <?php
-session_start();
+require '../../vendor/autoload.php';
 
-if(!isset($_SESSION['id']))
-{
+use App\Database as DB;
+use App\Sessions;
+
+Sessions::init();
+
+if (!isset($_SESSION['id'])) {
 	echo "Your need to login to use this page";
 	header("Location:index.php");
-}
-else
-{
+} else {
 	$vendorid = $_SESSION['id'];
 	$vendorusername = $_SESSION['username'];
 
 	$servername = "localhost";
 	$username = "root";
-	$password = "";
+	$password = "Spellingbee@1";
 	$dbname = "vendordb";
 
 	$logoError = "";
 	$logoStatus = "";
 
-	if($_POST)
-	{
+	if ($_POST) {
 		//varibles to be equated into the post
 		$vendorCompanyname = $_POST['companyname'];
 		$vendordescription = $_POST['description'];
@@ -35,21 +36,12 @@ else
 		echo "$vendorDate";
 
 
-
 		//connecting to the database
-		$conn = mysqli_connect($servername, $username, $password, $dbname);
-		if (!$conn) 
-		{
-			$databaseerror = "could not connect to database";
-    		die("Connection failed: " . mysqli_connect_error($conn));
-		}
-
-		$databasestatus = "Connected to database successfully <br>";
-		echo $databasestatus;
+		$conn = DB::_db();
 
 		//script that uploads logo
 		include("upload_logo.php");
-		if($uploadOk == 0){
+		if ($uploadOk == 0) {
 			exit;
 		}
 
@@ -60,7 +52,6 @@ else
 		//allowed images types
 		$allowed = array('jpg', 'jpeg', 'png', 'gif', 'svg', 'tiff');
 
-		
 
 		//script that uploads the image one
 		include("upload_image1.php");
@@ -73,11 +64,9 @@ else
 
 		echo "<br> input to database successful";
 
-		if (mysqli_query($conn,$updateinput))
-		{
+		if (mysqli_query($conn, $updateinput)) {
 			header("Location:vendor_profile.php");
-		}
-		else{
+		} else {
 			$error = "error inputting data";
 		}
 

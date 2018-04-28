@@ -1,5 +1,7 @@
-<?php 
-session_start();
+<?php
+require '../../vendor/autoload.php';
+use App\Sessions;
+Sessions::init();
 
 	include("vendor_login_process.php");
 ?>

@@ -1,8 +1,9 @@
 <?php
-
+require 'vendor/autoload.php';
+use App\Database as DB;
 	$vendorid = $_SESSION['id'];
-	$conn = mysqli_connect("localhost", "root", "", "vendordb");
-	$query = "SELECT * FROM vendor_info where `id` = 'vendorid'";\
+	$conn = DB::_db();
+	$query = "SELECT * FROM vendor_info where `id` = 'vendorid'";
 
 	$result = mysqli_query($conn, $query);
 	$row = mysqli_fetch_assoc($result);

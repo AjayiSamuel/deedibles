@@ -1,6 +1,7 @@
-<?php 
-session_start();
-
+<?php
+require '../../vendor/autoload.php';
+use App\Sessions;
+Sessions::init();
 if(!isset($_SESSION['username']))
 {
 	header("Location:admin_login.php");

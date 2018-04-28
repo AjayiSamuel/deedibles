@@ -1,6 +1,8 @@
 <?php
-session_start();
-
+require '../../vendor/autoload.php';
+use App\Sessions;
+use App\Database as DB;
+Sessions::init();
 $error='';
 
 if ($_POST) {
