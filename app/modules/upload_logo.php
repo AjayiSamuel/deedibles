@@ -1,4 +1,5 @@
 <?php
+use App\Database as DB;
 $logoError = NULL;
 $logoStatus = NULL;
 function createDir($dir)
@@ -9,6 +10,10 @@ function createDir($dir)
 	}
 }
 
+$conn = DB::_db();
+$query = "SELECT * FROM vendor_info WHERE id = '$vendorid'";
+$result = mysqli_query($conn,$query);
+
 //check if image is available
 if (isset($_FILES['logo'])) {
 //			echo $_FILES['logo']['tmp_name'];
@@ -16,11 +21,15 @@ if (isset($_FILES['logo'])) {
 } else {
 	echo "image is missing";
 }
-$target_dir = "logofolder/";
+$target_dir = "images/vendorlogo/";
+$fileExt1 = explode('.', $_FILES["logo"]["name"]);
+$fileActualExt1 = strtolower(end($fileExt1));
+$row = mysqli_fetch_assoc($result);
+
 createDir($target_dir);
 //print_r($_FILES);
-$target_file = $target_dir . basename($_FILES["logo"]["name"]);
-$target_dir = __DIR__.'/' . $target_file;
+$target_file = $target_dir . "logo-".$row['id'].".".$fileActualExt1;
+$target_dir = './' . $target_file;
 $uploadOk = 1;
 echo "$logoStatus & $logoError & $uploadOk <br> <br> <br>";
 
@@ -41,12 +50,7 @@ if (isset($_POST["submit"])) {
 		//exit;
 	}
 }
-// Check if file already exists
-if (file_exists($target_file)) {
-	$logoError = "Sorry, file already exists.";
-	$uploadOk = 0;
-	echo "$logoStatus & $logoError & $uploadOk <br> <br> <br>";
-}
+
 // Check file size
 if ($_FILES["logo"]["size"] > 5000000) {
 	$logoError = "Sorry, your file is too large.";

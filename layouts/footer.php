@@ -96,95 +96,30 @@
           <div class="off-canvas-body">
             <nav class="main-nav">
               <ul class="nav sf-menu expand-all">
-                <li class="mega-columns"><a href="home.html"><span class="menu-text">Home <i class="menu-icon fa fa-angle-down"></i></span></a>
-                  <ul class="row">
-                    <li class="col-xs-3 mega-col"><a href="home.html" class="mega-title"><span class="menu-text">Homepage Demos</span></a>
-                      <ul class="mega-content">
-                        <li class="active"><a href="home.html">Home 1</a></li>
-                        <li><a href="home-2.html">Home 2</a></li>
-                        <li><a href="home-3.html">Home 3</a></li>
-                      </ul>
-                    </li>
-                    <li class="col-xs-3 mega-col"><a href="home.html" class="mega-title"><span class="menu-text">Homepage Demos</span></a>
-                      <ul class="mega-content">
-                        <li><a href="home-4.html">Home 4</a></li>
-                        <li><a href="home-5.html">Home 5</a></li>
-                      </ul>
-                    </li>
-                    <li class="col-xs-3 mega-col"><a href="home.html" class="mega-title"><span class="menu-text">Homepage Demos</span></a>
-                      <ul class="mega-content">
-                        <li><a href="home-lookbook-1.html">Home Lookbook 1</a></li>
-                        <li><a href="home-lookbook-2.html">Home Lookbook 2</a></li>
-                      </ul>
-                    </li>
-                    <li class="col-xs-3 mega-col"><a href="home.html" class="mega-title"><span class="menu-text">Homepage Demos</span></a>
-                      <ul class="mega-content">
-                        <li><a href="home-parallax.html">Home Parallax</a></li>
-                      </ul>
-                    </li>
-                  </ul>
+                <li class="mega-columns"><a href="index.php"><span class="menu-text">Home <i class="menu-icon"></i></span></a>
+                
                 </li>
-                <li><a href="#"><span class="menu-text">Product <i class="menu-icon fa fa-angle-down"></i></span></a>
-                  <ul>
-                    <li><a href="product-list.html">Product List</a></li>
-                    <li><a href="product-grid-2.html">Product Grid 2</a></li>
-                    <li><a href="product-grid-3.html">Product Grid 3</a></li>
-                    <li><a href="product-grid-3-no-sb.html">Product Grid 3 No Sidebar</a></li>
-                    <li><a href="product-grid-4-no-sb.html">Product Grid 4 No Sidebar</a></li>
-                    <li><a href="product-grid-5-fullwidth.html">Product Grid 5 Fullwidth</a></li>
-                    <li><a href="product-detail.html">Product Detail</a></li>
-                    <li><a href="product-detail-rated.html">Product Detail Rated</a></li>
-                    <li><a href="search.html">Search</a></li>
-                  </ul>
-                </li>
-                <li><a href="#"><span class="menu-text">Shop <i class="menu-icon fa fa-angle-down"></i></span></a>
-                  <ul>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>
-                    <li><a href="wishlist.html">Wishlist</a></li>
-                    <li><a href="compare.html">Compare</a></li>
-                    <li><a href="track-your-order.html">Track Your Order</a></li>
-                    <li><a href="cart-empty.html">Cart Empty</a></li>
-                  </ul>
-                </li>
-                <li><a href="#"><span class="menu-text">Blog <i class="menu-icon fa fa-angle-down"></i></span></a>
-                  <ul>
-                    <li><a href="blog-list.html">Blog List</a></li>
-                    <li><a href="blog-grid-2.html">Blog Grid 2</a></li>
-                    <li><a href="blog-grid-3-no-sb.html">Blog Grid 3 No Sidebar</a></li>
-                    <li><a href="blog-grid-3-mansory-no-sb.html">Blog Grid 3 Mansory No Sidebar</a></li>
-                    <li><a href="blog-detail.html">Blog Detail</a></li>
-                  </ul>
-                </li>
-                <li><a href="about-us.html"><span class="menu-text">About Us</span></a></li>
-                <li><a href="contact.html"><span class="menu-text">Contact</span></a></li>
-                <li><a href="#"><span class="menu-text">Pages <i class="menu-icon fa fa-angle-down"></i></span></a>
+                <li><a href="#"><span class="menu-text">Categories <i class="menu-icon fa fa-angle-down"></i></span></a>
                   <ul class="dropdown-left">
-                    <li><a href="login.html">Login & Register</a></li>
-                    <li><a href="forgot-password.html">Forgot Password</a></li>
-                    <li><a href="faqs.html">Faqs</a></li>
-                    <li><a href="newsletter.html">Newsletter</a></li>
-                    <li><a href="shortcodes.html">Shortcodes</a></li>
-                    <li><a href="common-element.html">Common Element</a></li>
-                    <li><a href="error-page.html">Error Page</a></li>
-                    <li><a href="#"><span class="menu-text">Example menu item <i class="menu-icon fa fa-angle-down"></i></span></a>
-                      <ul>
-                        <li><a href="#">Example menu item</a></li>
-                        <li><a href="#"><span class="menu-text">Example menu item <i class="menu-icon fa fa-angle-down"></i></span></a>
-                          <ul>
-                            <li><a href="#">Example menu item</a></li>
-                            <li><a href="#">Example menu item</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#"><span class="menu-text">Example menu item <i class="menu-icon fa fa-angle-down"></i></span></a>
-                          <ul class="dropdown-left">
-                            <li><a href="#">Example menu item</a></li>
-                            <li><a href="#">Example menu item</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
+                  <li><a href="#">Cakes</a></li>
+                        <li><a href="#">Chocolates</a></li>
+                        <li><a href="#">Cocktails</a></li>
+                        <li><a href="#">Cupcakes</a></li>
+                        <li><a href="#">Dessert</a></li>
+                        <li><a href="#">Edible Arrangement</a></li>
+                        <li><a href="#">Edible Underwears</a></li>
+                        <li><a href="#">Fruit Trees</a></li>
+                        <li><a href="#">Gift Baskets</a></li>
+                        <li><a href="#">Ice cream bar</a></li>
+                        <li><a href="#">Small chops</a></li>
+                        <li><a href="#">Snacks</a></li>
                   </ul>
+                </li>
+                <li><a href="vendor_profile.php"><span class="menu-text">Profile</span></a>
+                </li>
+                <li><a href="about-us.html"><span class="menu-text">About Us</span></a>
+                </li>
+                <li><a href="contact.html"><span class="menu-text">Contact</span></a>
                 </li>
               </ul>
             </nav>

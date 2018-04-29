@@ -12,11 +12,16 @@ $fileType3 = $_FILES['imagethree']['type'];
 $fileExt3 = explode('.', $fileName3);
 $fileActualExt3 = strtolower(end($fileExt3));
 
+$conn = DB::_db();
+$query = "SELECT * FROM vendor_info WHERE id = '$vendorid'";
+$result = mysqli_query($conn,$query);
+$row = mysqli_fetch_assoc($result);
+
 if (in_array($fileActualExt3, $allowed)) {
 	if ($fileError3 === 0) {
 		if ($fileSize3 < 5000000) {
-			$fileNameNew3 = uniqid('', true) . "." . $fileActualExt3;
-			$fileDestination3 = 'images/' . $fileNameNew3;
+			$fileNameNew3 = "image3-" .$row['id']."." . $fileActualExt3;
+			$fileDestination3 = 'images/vendorimages/' . $fileNameNew3;
 			move_uploaded_file($fileTmpName3, $fileDestination3);
 
 			$queryimage3 = "UPDATE `vendor_info` SET `image3`= '$fileDestination3' WHERE `vendor_info`.`id` = '$vendorid' ";

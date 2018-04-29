@@ -77,6 +77,8 @@
                         <li><a href="#">Snacks</a></li>
                       </ul>
                     </li>
+                    <li><a href="vendor_profile.php"><span class="menu-text">Profile</span></a>
+                </li>
                     <li><a href="about-us.html"><span class="menu-text">About Us</span></a></li>
                     <li><a href="contact.html"><span class="menu-text">Contact</span></a></li>
                   </ul>

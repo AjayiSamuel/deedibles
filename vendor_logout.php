@@ -1,5 +1,5 @@
 <?php
-require '../../vendor/autoload.php';
+require 'vendor/autoload.php';
 use App\Sessions;
 Sessions::init();
 if(!isset($_SESSION['username']))

@@ -14,11 +14,16 @@ $fileActualExt1 = strtolower(end($fileExt1));
 
 $allowed = array('jpg', 'jpeg', 'png', 'gif', 'svg', 'tiff');
 
+$conn = DB::_db();
+$query = "SELECT * FROM vendor_info WHERE id = '$vendorid'";
+$result = mysqli_query($conn,$query);
+$row = mysqli_fetch_assoc($result);
+
 if (in_array($fileActualExt1, $allowed)) {
 	if ($fileError1 === 0) {
 		if ($fileSize1 < 5000000) {
-			$fileNameNew1 = uniqid('', true) . "." . $fileActualExt1;
-			$fileDestination1 = './images/' . $fileNameNew1;
+			$fileNameNew1 = "image1-".$row['id'] . "." . $fileActualExt1;
+			$fileDestination1 = 'images/vendorimages/' . $fileNameNew1;
 			move_uploaded_file($fileTmpName1, $fileDestination1);
 
 			$queryimage1 = "UPDATE `vendor_info` SET `image1`= '$fileDestination1' WHERE `vendor_info`.`id` = '$vendorid' ";

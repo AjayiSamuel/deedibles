@@ -149,24 +149,36 @@ include 'layouts/header.php';
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">First Image</strong></div>
                       <div class="mv-field">
-						<input type="file" name="imageone" value="<?php echo $firstImg?>" required>          
+						<input type="file" name="imageone" value="<?php echo $firstImg?>">          
 					  </div>
 					</div>
 
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Second Image</strong></div>
                       <div class="mv-field">
-						<input type="file" name="imagetwo" placeholder="upload second image " required>
+						<input type="file" name="imagetwo" placeholder="upload second image ">
                       </div>
 					</div>
 
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Third Image</strong></div>
                       <div class="mv-field">
-						<input type="file" name="imagethree" placeholder="upload third image " required>
+						<input type="file" name="imagethree" placeholder="upload third image ">
                       </div>
 					</div>
-
+					<div class="mv-form-group">
+                      <div class="mv-label"> <strong class="text-uppercase">Profile Background</strong></div>
+                      <div class="mv-field">
+						<input type="file" name="profilebackground" placeholder="upload Profile Background ">
+                      </div>
+					</div>
+					<div class="mv-form-group">
+                      <div class="mv-label"> <strong class="text-uppercase">Company Description</strong></div>
+                      <div class="mv-field">
+						<textarea name="longcompanydesription" placeholder="Enter company description " class="mv-inputbox mv-inputbox-style-1" required style="resize:vertical;" value="<?php echo $longDesc;?>">
+</textarea>
+                      </div>
+					</div>
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Enter Address</strong></div>
                       <div class="mv-field">

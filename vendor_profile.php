@@ -34,6 +34,8 @@ if (!isset($_SESSION['id'])) {
 		$thridImg = $row['image3'];
 		$category = $row['category'];
 		$address = $row['address'];
+		$longDesc = $row['company_description'];
+		$background = $row['background_img'];
 	}
 }
 ?>

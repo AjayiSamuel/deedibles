@@ -33,53 +33,22 @@
                       <div class="product-detail-slider mv-slick-slide mv-lightbox-style-1">
                         <div class="block-26-gallery-main">
                           <div class="slider gallery-main">
+                          <div class="slick-slide">
+                              <div class="slick-slide-inner"><a href="<?php echo $logo;?>" title="" class="mv-lightbox-item"><img src="<?php echo $logo;?>" alt="demo" class="block-26-main-img"/></a></div>
+                            </div>
+                            <!-- .slick-slide-->
                             <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="images/demo/demo_370x530.png" title="" class="mv-lightbox-item"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-main-img"/></a></div>
+                              <div class="slick-slide-inner"><a href="<?php echo $firstImg;?>" title="" class="mv-lightbox-item"><img src="<?php echo $firstImg;?>" alt="demo" class="block-26-main-img"/></a></div>
                             </div>
                             <!-- .slick-slide-->
 
                             <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="images/demo/demo_370x530.png" title="" class="mv-lightbox-item"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-main-img"/></a></div>
+                              <div class="slick-slide-inner"><a href="<?php echo $secondImg;?>" title="" class="mv-lightbox-item"><img src="<?php echo $secondImg;?>" alt="demo" class="block-26-main-img"/></a></div>
                             </div>
                             <!-- .slick-slide-->
 
                             <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="images/demo/demo_370x530.png" title="" class="mv-lightbox-item"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-main-img"/></a></div>
-                            </div>
-                            <!-- .slick-slide-->
-
-                            <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="images/demo/demo_370x530.png" title="" class="mv-lightbox-item"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-main-img"/></a></div>
-                            </div>
-                            <!-- .slick-slide-->
-
-                            <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="images/demo/demo_370x530.png" title="" class="mv-lightbox-item"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-main-img"/></a></div>
-                            </div>
-                            <!-- .slick-slide-->
-
-                            <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="images/demo/demo_370x530.png" title="" class="mv-lightbox-item"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-main-img"/></a></div>
-                            </div>
-                            <!-- .slick-slide-->
-
-                            <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="images/demo/demo_370x530.png" title="" class="mv-lightbox-item"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-main-img"/></a></div>
-                            </div>
-                            <!-- .slick-slide-->
-
-                            <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="images/demo/demo_370x530.png" title="" class="mv-lightbox-item"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-main-img"/></a></div>
-                            </div>
-                            <!-- .slick-slide-->
-
-                            <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="images/demo/demo_370x530.png" title="" class="mv-lightbox-item"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-main-img"/></a></div>
-                            </div>
-                            <!-- .slick-slide-->
-
-                            <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="images/demo/demo_370x530.png" title="" class="mv-lightbox-item"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-main-img"/></a></div>
+                              <div class="slick-slide-inner"><a href="<?php echo $thridImg;?>" title="" class="mv-lightbox-item"><img src="<?php echo $thridImg;?>" alt="demo" class="block-26-main-img"/></a></div>
                             </div>
                             <!-- .slick-slide-->
 
@@ -91,43 +60,19 @@
                           <div class="block-26-gallery-thumbs-inner">
                             <div class="slider gallery-thumbs">
                               <div class="slick-slide">
-                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-thumbs-img"/></div>
+                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="<?php echo $logo;?>" alt="company logo" class="block-26-thumbs-img"/></div>
                               </div>
 
                               <div class="slick-slide">
-                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-thumbs-img"/></div>
+                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="<?php echo $firstImg;?>" alt="company image1" class="block-26-thumbs-img"/></div>
                               </div>
 
                               <div class="slick-slide">
-                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-thumbs-img"/></div>
+                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="<?php echo $secondImg;?>" alt="company image2" class="block-26-thumbs-img"/></div>
                               </div>
 
                               <div class="slick-slide">
-                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-thumbs-img"/></div>
-                              </div>
-
-                              <div class="slick-slide">
-                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-thumbs-img"/></div>
-                              </div>
-
-                              <div class="slick-slide">
-                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-thumbs-img"/></div>
-                              </div>
-
-                              <div class="slick-slide">
-                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-thumbs-img"/></div>
-                              </div>
-
-                              <div class="slick-slide">
-                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-thumbs-img"/></div>
-                              </div>
-
-                              <div class="slick-slide">
-                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-thumbs-img"/></div>
-                              </div>
-
-                              <div class="slick-slide">
-                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="images/demo/demo_370x530.png" alt="demo" class="block-26-thumbs-img"/></div>
+                                <div class="slick-slide-inner mv-box-shadow-gray-2"><img src="<?php echo $thridImg;?>" alt="company image3" class="block-26-thumbs-img"/></div>
                               </div>
 
                             </div>

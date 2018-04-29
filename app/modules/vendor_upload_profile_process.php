@@ -1,5 +1,5 @@
 <?php
-require '../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 use App\Database as DB;
 use App\Sessions;
@@ -13,10 +13,6 @@ if (!isset($_SESSION['id'])) {
 	$vendorid = $_SESSION['id'];
 	$vendorusername = $_SESSION['username'];
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "Spellingbee@1";
-	$dbname = "vendordb";
 
 	$logoError = "";
 	$logoStatus = "";

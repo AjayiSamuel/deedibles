@@ -1,5 +1,5 @@
 <?php 
-	include("vendor_upload_profile_process.php");
+	include("app/module/vendor_upload_profile_process.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,6 +124,19 @@ include 'layouts/header.php';
                       <div class="mv-label"> <strong class="text-uppercase">Enter Address</strong></div>
                       <div class="mv-field">
 					  <input name="address" type="text" placeholder="enter company address" class="mv-inputbox mv-inputbox-style-1" required>
+                      </div>
+          </div>
+          <div class="mv-form-group">
+                      <div class="mv-label"> <strong class="text-uppercase">Company Description</strong></div>
+                      <div class="mv-field">
+						<textarea name="longcompanydesription" placeholder="Enter company description " class="mv-inputbox mv-inputbox-style-1" required style="resize:vertical;">
+</textarea>
+                      </div>
+					</div>
+					<div class="mv-form-group">
+                      <div class="mv-label"> <strong class="text-uppercase">Enter Address</strong></div>
+                      <div class="mv-field">
+					  <input name="address" type="text" value="<?php echo $address?>" class="mv-inputbox mv-inputbox-style-1" required>
                       </div>
 					</div>
 

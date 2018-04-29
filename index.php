@@ -39,10 +39,10 @@ Sessions::init();
 									us what you want, We'll bake it
 								</div>
 							</div>
-							<a href="product-grid-3.html"
+							<a href="vendors.php"
 							   class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2"><span
 										class="btn-inner"><i class="btn-icon fa fa-cart-plus"></i><span
-											class="btn-text">shop now</span></span></a>
+											class="btn-text">View all Vendors</span></span></a>
 						</div>
 					</div>
 				</li>
@@ -60,7 +60,7 @@ Sessions::init();
 									yourself today from our finest selctions
 								</div>
 							</div>
-							<a href="product-grid-3.html"
+							<a href="product-grid-3.php"
 							   class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2"><span
 										class="btn-inner"><i class="btn-icon fa fa-cart-plus"></i><span
 											class="btn-text">shop now</span></span></a>

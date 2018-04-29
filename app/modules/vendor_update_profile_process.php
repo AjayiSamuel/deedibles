@@ -43,8 +43,7 @@ if (!isset($_SESSION['id'])) {
 		include("upload_logo.php");
 		if ($uploadOk == 0) {
 			exit;
-		}
-
+		};
 		$updateinput = "UPDATE `vendor_info` SET `company_name`= '$vendorCompanyname', `phone_number`='$vendorPhoneNumber',`company_description`='$vendordescription',`facebook_link`='$vendorFacebookLink',`instagram_link`='$vendorInstagramLink',`category`='$vendorCategory',`address`='$vendorAddress',`date`='$vendorDate' , `logo` = '$target_file' WHERE `vendor_info`.`id` = '$vendorid' ";
 
 		var_dump($updateinput);
