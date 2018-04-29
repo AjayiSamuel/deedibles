@@ -1,8 +1,13 @@
 <?php
-include 'functions.php';
 $logoError = NULL;
 $logoStatus = NULL;
-
+function createDir($dir)
+{
+	$absPath = "./$dir";
+	if (!file_exists($absPath) || !is_dir($absPath)) {
+		mkdir($absPath,0777);
+	}
+}
 
 //check if image is available
 if (isset($_FILES['logo'])) {

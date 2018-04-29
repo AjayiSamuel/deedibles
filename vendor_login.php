@@ -1,5 +1,5 @@
 <?php
-require '../../vendor/autoload.php';
+require 'vendor/autoload.php';
 use App\Sessions;
 Sessions::init();
 ?>
@@ -48,7 +48,7 @@ Sessions::init();
           <div class="row">
             <div class="col-sm-6 col-login">
               <div class="mv-form-style-1 mv-box-shadow-gray-1">
-                <form method="POST" class="form-login" action="vendor_login_process.php">
+                <form method="POST" class="form-login" action="app/modules/vendor_login_process.php">
                   <div class="form-header">
                     <div class="mv-title-style-13">
                       <div class="text-main">sign in</div>

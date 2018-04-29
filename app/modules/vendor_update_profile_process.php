@@ -1,11 +1,11 @@
 <?php
 
-require '../../vendor/autoload.php';
+require 'vendor/autoload.php';
 use App\Sessions;
 use App\Database as DB;
 Sessions::init();
 $vendorid = $_SESSION['id'];
-echo "<br> My id is $vendorid";
+//echo "<br> My id is $vendorid";
 
 if (!isset($_SESSION['id'])) {
 	echo "Your need to login to use this page";

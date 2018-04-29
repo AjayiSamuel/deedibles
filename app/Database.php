@@ -14,6 +14,7 @@ class Database extends Config
 
 	public function __construct()
 	{
+		global $db;
 		$db = mysqli_connect('localhost', parent::$db_params['DB_USERNAME'], parent::$db_params['DB_PASSWORD'], parent::$db_params['DB_NAME']);
 
 		if (!$db) {
@@ -26,10 +27,12 @@ class Database extends Config
 	 */
 	public static function _db()
 	{
+		global $db;
 		if (null === self::$instance) {
 			self::$instance = new self();
 
 		}
-		return self::$instance->db;
+		self::$instance = $db;
+		return self::$instance;
 	}
 }

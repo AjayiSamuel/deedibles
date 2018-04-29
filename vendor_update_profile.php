@@ -1,7 +1,7 @@
 <?php
-require './vendor/autoload.php';
+require 'vendor/autoload.php';
 use App\Database as DB;
-	include("vendor_update_profile_process.php");
+	include("app/modules/vendor_update_profile_process.php");
 ?>
 
 <?php
@@ -40,8 +40,6 @@ else
 		$thridImg = $row['image3'];
 		$category = $row['category'];
 		$address = $row['address'];
-		
-
 	}
 }
 ?>

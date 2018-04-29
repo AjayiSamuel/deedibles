@@ -200,7 +200,7 @@
                           <div class="mv-btn-group text-left">
                             <div class="group-inner">
                                 <a href="vendor_update_profile.php">
-                              <button type="button" class="mv-btn mv-btn-style-1 btn-1-h-50 responsive-btn-1-type-3 btn-add-to-cart"><span class="btn-inner"></i><span class="btn-text">Update details</span></span></button>
+                              <button type="button" class="mv-btn mv-btn-style-1 btn-1-h-50 "><span class="btn-inner"></i><span class="btn-text">Update details</span></span></button>
                                 </a>
                             </div>
                           </div>
