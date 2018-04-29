@@ -1,5 +1,5 @@
 <?php 
-	include("app/module/vendor_upload_profile_process.php");
+	include("app/modules/vendor_upload_profile_process.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,7 @@ include 'layouts/header.php';
           <div class="row">
             <div class="col-sm-6 col-register" style="margin-left:auto;margin-right:auto;float:none;">
               <div class="mv-form-style-1 mv-box-shadow-gray-1">
-                <form method="POST" class="form-register" action="">
+                <form method="POST" class="form-register" action="" enctype="multipart/form-data">
                   <div class="form-header">
                     <div class="mv-title-style-13">
 					<div class="text-main">

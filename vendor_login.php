@@ -89,10 +89,10 @@ Sessions::init();
 
             <div class="col-sm-6 col-register">
               <div class="mv-form-style-1 mv-box-shadow-gray-1">
-                <form method="POST" class="form-register" action="vendor_register_process.php">
+                <form method="POST" class="form-register" action="app/modules/vendor_register_process.php">
                   <div class="form-header">
                     <div class="mv-title-style-13">
-                      <div class="text-main">create a new account</div>
+                      <div class="text-main">create a new account</dapp/modules/iv>
                       <div class="text-sub">Create an account to track your orders, create a wishlist and more</div>
                     </div>
                   </div>

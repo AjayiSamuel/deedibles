@@ -17,6 +17,7 @@ $result = mysqli_query($conn,$query);
 //check if image is available
 if (isset($_FILES['logo'])) {
 //			echo $_FILES['logo']['tmp_name'];
+var_dump($_FILES);
 
 } else {
 	echo "image is missing";
