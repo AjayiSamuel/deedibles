@@ -67,6 +67,7 @@ if (!isset($_SESSION['id'])) {
 			header("Location:vendor_profile.php");
 		} else {
 			$error = "error inputting data";
+			#testing
 		}
 
 	}
