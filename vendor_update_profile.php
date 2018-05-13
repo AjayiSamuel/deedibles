@@ -29,6 +29,7 @@ else
 		$result = mysqli_query($conn,$query);
 	if ($result) {
 		$row = mysqli_fetch_assoc($result);
+		
 		$companyName = $row['company_name'];
 		$phoneNo = $row['phone_number'];
 		$description = $row['company_description'];
@@ -40,6 +41,8 @@ else
 		$thridImg = $row['image3'];
 		$category = $row['category'];
 		$address = $row['address'];
+		$longDesc = $row['long_company_description'];
+		
 	}
 }
 ?>
@@ -142,7 +145,7 @@ include 'layouts/header.php';
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Upload Logo</strong></div>
                       <div class="mv-field">
-							<input type="file" name="logo" placeholder="upload your company logo" class="" required><span><?php echo "$logoError";?></span>
+							<input type="file" name="logo" placeholder="upload your company logo" class=""><span><?php echo "$logoError";?></span>
                       </div>
 					</div>
 
@@ -175,8 +178,7 @@ include 'layouts/header.php';
 					<div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Company Description</strong></div>
                       <div class="mv-field">
-						<textarea name="longcompanydesription" placeholder="Enter company description " class="mv-inputbox mv-inputbox-style-1" required style="resize:vertical;" value="<?php echo $longDesc;?>">
-</textarea>
+						<textarea name="longcompanydesription" placeholder="Enter company description " class="mv-inputbox mv-inputbox-style-1" style="resize:vertical;"><?php echo $longDesc;?></textarea>
                       </div>
 					</div>
 					<div class="mv-form-group">

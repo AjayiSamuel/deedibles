@@ -13,11 +13,7 @@ if (!isset($_SESSION['id'])) {
 	//Session variables
 	$vendorid = $_SESSION['id'];
 	$vendorusername = $_SESSION['username'];
-	//sql connection variables
-	$servername = "localhost";
-	$username = "root";
-	$password = "Spellingbee@1";
-	$dbname = "vendordb";
+
 	//log variables
 	$logoError = "";
 	$logoStatus = "";
@@ -26,6 +22,7 @@ if (!isset($_SESSION['id'])) {
 		//varibles to be equated into the post
 		$vendorCompanyname = $_POST['companyname'];
 		$vendordescription = $_POST['description'];
+		$vendorlongdescription = $_POST['longcompanydesription'];
 		$vendorPhoneNumber = $_POST['phone_number'];
 		$vendorFacebookLink = $_POST['facebook_link'];
 		$vendorInstagramLink = $_POST['instagram_link'];
@@ -41,12 +38,13 @@ if (!isset($_SESSION['id'])) {
 
 		//script that uploads logo
 		include("upload_logo.php");
+		include("upload_background.php");
 		if ($uploadOk == 0) {
-			exit;
+			// exit;
 		};
-		$updateinput = "UPDATE `vendor_info` SET `company_name`= '$vendorCompanyname', `phone_number`='$vendorPhoneNumber',`company_description`='$vendordescription',`facebook_link`='$vendorFacebookLink',`instagram_link`='$vendorInstagramLink',`category`='$vendorCategory',`address`='$vendorAddress',`date`='$vendorDate' , `logo` = '$target_file' WHERE `vendor_info`.`id` = '$vendorid' ";
+		$updateinput = "UPDATE `vendor_info` SET `company_name`= '$vendorCompanyname', `phone_number`='$vendorPhoneNumber',`company_description`='$vendordescription',`facebook_link`='$vendorFacebookLink',`instagram_link`='$vendorInstagramLink',`category`='$vendorCategory',`address`='$vendorAddress',`date`='$vendorDate' ,`long_company_description`='$vendorlongdescription' WHERE `vendor_info`.`id` = '$vendorid' ";
 
-		var_dump($updateinput);
+		// var_dump($updateinput);
 		//section for uploading logo and images
 
 		//allowed images types
@@ -62,11 +60,13 @@ if (!isset($_SESSION['id'])) {
 		//script that uploads the image one
 		include("upload_image3.php");
 
-		echo "<br> input to database successful";
+		
 		if (mysqli_query($conn, $updateinput)) {
+			echo "<br> input to database successful";
 			header("Location:vendor_profile.php");
 		} else {
 			$error = "error inputting data";
+			echo $error."-".mysqli_error($conn);
 			#testing
 		}
 

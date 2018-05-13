@@ -17,11 +17,6 @@ $result = mysqli_query($conn,$query);
 //check if image is available
 if (isset($_FILES['logo'])) {
 //			echo $_FILES['logo']['tmp_name'];
-var_dump($_FILES);
-
-} else {
-	echo "image is missing";
-}
 $target_dir = "images/vendorlogo/";
 $fileExt1 = explode('.', $_FILES["logo"]["name"]);
 $fileActualExt1 = strtolower(end($fileExt1));
@@ -72,6 +67,13 @@ if ($uploadOk == 0) {
 	// if everything is ok, try to upload file
 } else {
 	if (move_uploaded_file($_FILES["logo"]["tmp_name"], $target_dir)) {
+
+		$queryimage1 = "UPDATE `vendor_info` SET `logo` = '$target_file' WHERE `vendor_info`.`id` = '$vendorid' ";
+
+		if (mysqli_query(DB::_db(), $queryimage1)) {
+			echo "image input sucessful";
+		}
+
 		$logoStatus = "The file " . basename($_FILES["logo"]["name"]) . " has been uploaded.";
 		$logo_dir = $target_dir;
 		echo "$logoStatus & $logoError & $uploadOk <br> <br> <br> $ $logo_dir";
@@ -79,6 +81,11 @@ if ($uploadOk == 0) {
 		$logoError = "Sorry, there was an error uploading your file.";
 		echo "$logoStatus & $logoError & $uploadOk <br> <br> <br>";
 	}
+}
+
+
+} else {
+	echo "image is missing";
 }
 
 ?>
