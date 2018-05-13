@@ -29,7 +29,7 @@ class Paginator{
 		$this->noOfItems = $noOfItems;
 		$this->pagesInRange = $pagesInRange;
 		$this->paginator = new Pagination();
-		if ($_GET['page'] === null): $_GET['page'] = 1;endif;
+		if (!isset($_GET['page']) || $_GET['page'] === null): $_GET['page'] = 1;endif;
 		/**
 		 * For PageUrl
 		 */

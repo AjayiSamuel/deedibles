@@ -1,8 +1,13 @@
+<?php
+ if($background == null){
+  $background = "images/icon/icon_line_polygon_line.png";
+}
+?>
 <section class="main-banner mv-wrap">
-        <div data-image-src="images/background/demo_bg_1920x1680.png" class="mv-banner-style-1 mv-bg-overlay-dark overlay-0-85 mv-parallax">
+        <div data-image-src="<?php echo $background;?>" class="mv-banner-style-1 mv-bg-overlay-dark overlay-0-85 mv-parallax">
           <div class="page-name mv-caption-style-6">
             <div class="container">
-              <div class="mv-title-style-9"><span class="main">product detail</span><img src="images/icon/icon_line_polygon_line.png" alt="icon" class="line"/></div>
+              <div class="mv-title-style-9"><span class="main"><?php echo $companyName;?></span></div>
             </div>
           </div>
         </div>
@@ -13,8 +18,8 @@
         <div class="mv-breadcrumb-style-1">
           <div class="container">
             <ul class="breadcrumb-1-list">
-              <li><a href="home.html"><i class="fa fa-home"></i></a></li>
-              <li><a href="product-grid-3.html">Product</a></li>
+              <li><a href="index.php"><i class="fa fa-home"></i></a></li>
+              <!-- <li><a href="product-grid-3.html">Product</a></li> -->
               <li><a> Vendor Profile</a></li>
             </ul>
           </div>
@@ -86,14 +91,14 @@
                     </div>
                     <!-- .mv-block-style-26-->
 
-                    <div onclick="$(this).remove()" class="block-27-sale-off mv-label-style-2 text-center">
-                      <div class="label-2-inner">
+                    <!-- <div onclick="$(this).remove()" class="block-27-sale-off mv-label-style-2 text-center"> -->
+                      <!-- <div class="label-2-inner">
                         <ul class="label-2-ul">
                           <li class="number">-25%</li>
                           <li class="text">sale</li>
                         </ul>
                       </div>
-                    </div>
+                    </div> -->
 
                     <div><img src="images/demo/demo_120x40.png" alt="demo" onclick="$(this).remove()" class="block-27-logo"/></div>
                   </div>
@@ -168,11 +173,9 @@
 
                   <div class="tab-content">
                     <div id="tab31" role="tabpanel" class="tab-pane active">
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                      <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc finibus sit amet ligula id gravida. Curabitur quis orci non leo varius dapibus in ortnare tortor. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                      <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc finibus sit amet ligula id gravida. Curabitur quis orci non leo varius dapibus in ortnare tortor. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                      <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc finibus sit amet ligula id gravida. Curabitur quis orci non leo varius dapibus in ortnare tortor. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                      <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc finibus sit amet ligula id gravida. Curabitur quis orci non leo varius dapibus in ortnare tortor. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                      <?php
+echo $longdescription;
+                      ?>
                     </div>
                   </div>
                 </div>

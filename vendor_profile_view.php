@@ -13,6 +13,7 @@ use App\Database as DB;
 
 		$vendorCompanyname = $row['company_name'];
 		$vendordescription = $row['company_description'];
+		$longdescription = $row['long_company_description'];
 		$vendorPhoneNumber = $row['phone_number'];
 		$vendorFacebookLink = $row['facebook_link'];
 		$vendorInstagramLink = $row['instagram_link'];

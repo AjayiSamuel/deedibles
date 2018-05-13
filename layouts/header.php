@@ -54,7 +54,7 @@
               </div>
               <!-- .header-toggle-off-canvas-->
 
-              <div class="header-logo"><a href="home.html" title=""><img src="images/logo/logo_white.png" alt="logo" class="logo-img img-default image-live-view"/><img src="images/logo/logo_2.png" alt="logo" class="logo-img img-scroll image-live-view"/></a></div>
+              <div class="header-logo"><a href="index.php" title=""><img src="images/logo/logo_white.png" alt="logo" class="logo-img img-default image-live-view"/><img src="images/logo/logo_2.png" alt="logo" class="logo-img img-scroll image-live-view"/></a></div>
               <!-- .header-logo-->
 
               <div class="main-nav-wrapper hidden-xs hidden-sm">

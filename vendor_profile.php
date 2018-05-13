@@ -26,6 +26,7 @@ if (!isset($_SESSION['id'])) {
 		$companyName = $row['company_name'];
 		$phoneNo = $row['phone_number'];
 		$description = $row['company_description'];
+		$longdescription = $row['long_company_description'];
 		$logo = $row['logo'];
 		$fbLink = $row['facebook_link'];
 		$igLink = $row['instagram_link'];
