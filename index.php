@@ -41,8 +41,9 @@ Sessions::init();
 							</div>
 							<a href="vendors.php"
 							   class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2"><span
-										class="btn-inner"><i class="btn-icon fa fa-cart-plus"></i><span
-											class="btn-text">View all Vendors</span></span></a>
+										class="btn-inner">
+										<span class="btn-text">Check Out Vendors</span></span>
+							</a>
 						</div>
 					</div>
 				</li>
@@ -60,10 +61,12 @@ Sessions::init();
 									yourself today from our finest selctions
 								</div>
 							</div>
-							<a href="product-grid-3.php"
-							   class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2"><span
-										class="btn-inner"><i class="btn-icon fa fa-cart-plus"></i><span
-											class="btn-text">shop now</span></span></a>
+							<a href="vendors.php"
+							   class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2">
+							   <span class="btn-inner">
+									<span class="btn-text">Check Out Vendors</span>
+								</span>
+							</a>
 						</div>
 					</div>
 				</li>
@@ -81,10 +84,11 @@ Sessions::init();
 									access to a wide variety of cocktail drinks
 								</div>
 							</div>
-							<a href="product-grid-3.html"
+							<a href="vendors.php"
 							   class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2"><span
-										class="btn-inner"><i class="btn-icon fa fa-cart-plus"></i><span
-											class="btn-text">shop now</span></span></a>
+										class="btn-inner">
+										<span class="btn-text">Check Out Vendors</span></span>
+							</a>
 						</div>
 					</div>
 				</li>
@@ -1234,9 +1238,12 @@ Sessions::init();
 	<section class="home-1-shop hidden-xs hidden-sm mv-wrap">
 		<div class="container">
 			<div class="block-list-1">
-				<div class="mv-block-style-3"><a href="#"
-				                                 class="mv-btn mv-btn-style-1 btn-1-h-40 btn-1-gray responsive-btn-1-type-2 btn-shop-now hidden-xs hidden-sm"><span
-								class="btn-inner"><i class="btn-icon fa fa-cart-plus"></i><span class="btn-text">shop now</span></span></a>
+				<div class="mv-block-style-3">
+				<a href="vendors.php"class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2">
+					<span class="btn-inner">
+						<span class="btn-text">Check Out Vendors</span>
+					</span>
+				</a>
 					<div class="block-3-list">
 						<div class="item">
 							<div class="block-3-title">

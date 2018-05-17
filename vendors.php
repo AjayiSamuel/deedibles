@@ -6,13 +6,6 @@ use App\Database as DB;
 use App\Paginator;
 
 Sessions::init();
-if (!isset($_SESSION['id'])) {
-	echo "You need to be logged in to view this page";
-	exit;
-} else {
-	$vendorid = $_SESSION['id'];
-
-
 	$conn = DB::_db();
 	$query = "SELECT * FROM vendor_info";
 
@@ -26,7 +19,6 @@ if (!isset($_SESSION['id'])) {
 
     $paginator = new Paginator($rows,"",8);
 
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
