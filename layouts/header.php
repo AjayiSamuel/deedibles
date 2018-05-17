@@ -77,7 +77,7 @@
                         <li><a href="#">Snacks</a></li>
                       </ul>
                     </li>
-                    <?php if(isset($_SESSION['id']) || $_SESSION['id'] !== null):?>
+                    <?php if(isset($_SESSION['username']) && $_SESSION !== NULL):?>
                     <li><a href="vendor_profile.php"><span class="menu-text">Profile</span></a></li>
                 <?php endif;?>
                     <li><a href="about-us.html"><span class="menu-text">About Us</span></a></li>
