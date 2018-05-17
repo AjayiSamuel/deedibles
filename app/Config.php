@@ -12,7 +12,7 @@ class Config
 {
 	protected static $db_params = Array(
 		'DB_NAME' => 'vendordb',
-		'DB_USERNAME' => 'root',
-		'DB_PASSWORD' => ''
+		'DB_USERNAME' => 'lonelytomb',
+		'DB_PASSWORD' => 'Spellingbee@1'
 	);
 }

@@ -1,36 +1,64 @@
 <?php
 require 'vendor/autoload.php';
+
+use App\Sessions;
 use App\Database as DB;
-	$vendorid = $_SESSION['id'];
+
+Sessions::init();
+	$vendorid = $_GET['vendor_id'];
+
+
 	$conn = DB::_db();
-	$query = "SELECT * FROM vendor_info where `id` = 'vendorid'";
+	$query = "SELECT * FROM vendor_info WHERE id = '$vendorid'";
+
+	if (!$conn) {
+		$databaseerror = "could not connect to database";
+		die("Connection failed: " . mysqli_connect_error($conn));
+	}
 
 	$result = mysqli_query($conn, $query);
-	$row = mysqli_fetch_assoc($result);
-
-
-	if (mysqli_query($conn, $query)) {
-
-		$vendorCompanyname = $row['company_name'];
-		$vendordescription = $row['company_description'];
+	if ($result) {
+		$row = mysqli_fetch_assoc($result);
+		$companyName = $row['company_name'];
+		$phoneNo = $row['phone_number'];
+		$description = $row['company_description'];
 		$longdescription = $row['long_company_description'];
-		$vendorPhoneNumber = $row['phone_number'];
-		$vendorFacebookLink = $row['facebook_link'];
-		$vendorInstagramLink = $row['instagram_link'];
-		$vendorLogo = $row['logo'];
-		$vendorImageOne = $row['first_pic'];
-		$vendorImageTwo = $row['second_pic'];
-		$vendorImageThree = $row['thrid_pic'];
-		$vendorImageFour = $row['forth_pic'];
-		$vendorImageFive = $row[''];
-		$vendorCategory = $row['category'];
-		$vendorDate =$row['date'];
-		$vendorAddress = $row['address'];
+		$logo = $row['logo'];
+		$fbLink = $row['facebook_link'];
+		$igLink = $row['instagram_link'];
+		$firstImg = $row['image1'];
+		$secondImg = $row['image2'];
+		$thridImg = $row['image3'];
+		$category = $row['category'];
+		$address = $row['address'];
+		$longDesc = $row['company_description'];
+		$background = $row['background_img'];
 	}
-
-	else {
-		echo "No input in your database";
-	}
-
-	mysqli_close($conn);
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+
+	</title>
+	<meta charset="UTF-8">
+	<?php
+	include 'layouts/head.php';
+	?>
+</head>
+<body>
+<div class="mv-site">
+	<?php
+	include 'layouts/header.php';
+	?>
+
+	<?php
+	include 'layouts/profile_view.php'
+	?>
+
+	<?php
+	include 'layouts/footer.php';
+	?>
+</div>
+</body>
+</html>

@@ -143,7 +143,7 @@
                       </div>
                       <!-- .block-27-message-->
                     </div>
-
+<?php if(!isset($_GET['vendor_id'])):?>
                     <div class="block-27-button">
                       <div class="mv-dp-table align-middle">
                         <div class="mv-dp-table-cell">
@@ -157,6 +157,7 @@
                         </div>
                       </div>
                     </div>
+<?php endif;?>
                   </div>
                 </div>
               </div>
