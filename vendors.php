@@ -52,8 +52,7 @@ Sessions::init();
           <div class="container">
             <ul class="breadcrumb-1-list">
               <li><a href="home.html"><i class="fa fa-home"></i></a></li>
-              <li><a href="product-grid-3.html">Product</a></li>
-              <li><a>Product 3 columns no sidebar</a></li>
+              <li><a href="vendors.php">Vendors <i class="fa fa-refresh"></i></a></li>
             </ul>
           </div>
         </div>

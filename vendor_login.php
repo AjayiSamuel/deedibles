@@ -52,7 +52,6 @@ Sessions::init();
                   <div class="form-header">
                     <div class="mv-title-style-13">
                       <div class="text-main">sign in</div>
-                      <div class="text-sub">Sign in with facebook and twitter box </div>
                     </div>
                   </div>
                   <!-- .form-header-->
@@ -93,11 +92,10 @@ Sessions::init();
                   <div class="form-header">
                     <div class="mv-title-style-13">
                       <div class="text-main">create a new account</dapp/modules/iv>
-                      <div class="text-sub">Create an account to track your orders, create a wishlist and more</div>
                     </div>
                   </div>
                   <!-- .form-header-->
-
+                  <br/> <br/>
                   <div class="form-body">
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Username</strong></div>

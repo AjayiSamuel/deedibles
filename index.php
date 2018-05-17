@@ -41,7 +41,7 @@ Sessions::init();
 							</div>
 							<a href="vendors.php"
 							   class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2"><span
-										class="btn-inner">
+										class="btn-inner"><i class="btn-icon fa fa-eye"></i>
 										<span class="btn-text">Check Out Vendors</span></span>
 							</a>
 						</div>
@@ -63,7 +63,7 @@ Sessions::init();
 							</div>
 							<a href="vendors.php"
 							   class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2">
-							   <span class="btn-inner">
+							   <span class="btn-inner"><i class="btn-icon fa fa-eye"></i>
 									<span class="btn-text">Check Out Vendors</span>
 								</span>
 							</a>
@@ -86,7 +86,7 @@ Sessions::init();
 							</div>
 							<a href="vendors.php"
 							   class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2"><span
-										class="btn-inner">
+										class="btn-inner"><i class="btn-icon fa fa-eye"></i>
 										<span class="btn-text">Check Out Vendors</span></span>
 							</a>
 						</div>
@@ -126,7 +126,7 @@ Sessions::init();
 
 							<div class="content-main">
 								<div class="content-name hidden-xs hidden-sm">
-									<div class="name-inner mv-overflow-ellipsis">AGV Open Face</div>
+									<div class="name-inner mv-overflow-ellipsis">Promoted</div>
 								</div>
 								<div class="content-text">
 									<div class="content-price">$ 129.99</div>
@@ -137,7 +137,7 @@ Sessions::init();
 								</div>
 							</div>
 
-							<div class="content-hover">
+							<!-- <div class="content-hover">
 								<div class="content-button mv-btn-group text-center">
 									<div class="group-inner">
 										<button type="button" title="Add To Wishlist"
@@ -152,7 +152,7 @@ Sessions::init();
 													class="fa fa-signal"></i></button>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</article>
 
@@ -175,7 +175,7 @@ Sessions::init();
 
 							<div class="content-main">
 								<div class="content-name hidden-xs hidden-sm">
-									<div class="name-inner mv-overflow-ellipsis">Alpinestars</div>
+									<div class="name-inner mv-overflow-ellipsis">Promoted</div>
 								</div>
 								<div class="content-text">
 									<div class="content-price">$ 250.00</div>
@@ -224,7 +224,7 @@ Sessions::init();
 
 							<div class="content-main">
 								<div class="content-name hidden-xs hidden-sm">
-									<div class="name-inner mv-overflow-ellipsis">Tractech Evo RACE</div>
+									<div class="name-inner mv-overflow-ellipsis">Promoted</div>
 								</div>
 								<div class="content-text">
 									<div class="content-price">$ 189.99</div>
@@ -235,7 +235,7 @@ Sessions::init();
 								</div>
 							</div>
 
-							<div class="content-hover">
+							<!-- <div class="content-hover">
 								<div class="content-button mv-btn-group text-center">
 									<div class="group-inner">
 										<button type="button" title="Add To Wishlist"
@@ -250,7 +250,7 @@ Sessions::init();
 													class="fa fa-signal"></i></button>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</article>
 				</div>
@@ -541,15 +541,7 @@ Sessions::init();
 									<div class="content-hover">
 										<div class="content-button mv-btn-group text-center">
 											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
+												<!--Deleted  Contents in hover -->
 											</div>
 										</div>
 									</div>
@@ -608,15 +600,7 @@ Sessions::init();
 									<div class="content-hover">
 										<div class="content-button mv-btn-group text-center">
 											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
+												<!--Deleted  Contents in hover -->
 											</div>
 										</div>
 									</div>
@@ -675,15 +659,7 @@ Sessions::init();
 									<div class="content-hover">
 										<div class="content-button mv-btn-group text-center">
 											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
+												<!--Deleted  Contents in hover -->
 											</div>
 										</div>
 									</div>
@@ -742,15 +718,7 @@ Sessions::init();
 									<div class="content-hover">
 										<div class="content-button mv-btn-group text-center">
 											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
+												<!--Deleted  Contents in hover -->
 											</div>
 										</div>
 									</div>
@@ -809,15 +777,7 @@ Sessions::init();
 									<div class="content-hover">
 										<div class="content-button mv-btn-group text-center">
 											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
+												<!--Deleted  Contents in hover -->
 											</div>
 										</div>
 									</div>
@@ -876,15 +836,7 @@ Sessions::init();
 									<div class="content-hover">
 										<div class="content-button mv-btn-group text-center">
 											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
+												<!--Deleted  Contents in hover -->
 											</div>
 										</div>
 									</div>
@@ -1240,7 +1192,7 @@ Sessions::init();
 			<div class="block-list-1">
 				<div class="mv-block-style-3">
 				<a href="vendors.php"class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2">
-					<span class="btn-inner">
+					<span class="btn-inner"><i class="btn-icon fa fa-eye"></i>
 						<span class="btn-text">Check Out Vendors</span>
 					</span>
 				</a>

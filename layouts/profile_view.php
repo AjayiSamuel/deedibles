@@ -20,7 +20,7 @@
             <ul class="breadcrumb-1-list">
               <li><a href="index.php"><i class="fa fa-home"></i></a></li>
               <!-- <li><a href="product-grid-3.html">Product</a></li> -->
-              <li><a> Vendor Profile</a></li>
+              <li><a> <?php echo $username ?>'s Profile</a></li>
             </ul>
           </div>
         </div>
@@ -150,7 +150,8 @@
                           <div class="mv-btn-group text-left">
                             <div class="group-inner">
                                 <a href="vendor_update_profile.php">
-                              <button type="button" class="mv-btn mv-btn-style-1 btn-1-h-50 "><span class="btn-inner"></i><span class="btn-text">Update details</span></span></button>
+                              <button type="button" class="mv-btn mv-btn-style-1 btn-1-h-50 "><span class="btn-inner"><i class="btn-icon fa fa-upload"></i><span class="btn-text">Update details</span></span></button>
+                              <!-- <span class="btn-inner"><i class="btn-icon fa fa-cart-plus"></i><span class="btn-text">shop now</span></span> -->
                                 </a>
                             </div>
                           </div>
