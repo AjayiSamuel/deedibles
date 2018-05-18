@@ -102,21 +102,41 @@
 
                     <div><img src="images/demo/demo_120x40.png" alt="demo" onclick="$(this).remove()" class="block-27-logo"/></div>
                   </div>
-
+                  <br>
                   <div class="mv-col-right block-27-col-info">
                     <div class="col-info-inner">
                       <div class="block-27-info">
-                        <div class="block-27-title">Company Name: <?php echo $companyName?></div>
+                        <div class="block-27-title"><?php echo $companyName?></div>
 
-                        
-
-                        <div class="block-27-price">
-                          <div class="new-price">Phone No: <?php echo $phoneNo?> </div>
+                        <div class="block-27-desc">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                           <?php echo $phoneNo?> 
                         </div>
 
-                        <div class="block-27-desc">Short Description: <p> <?php echo $description?> </p></div>
+                        <div class="block-27-desc">
+                          <a href="http://<?php echo $fbLink ?>"><i class="fa fa-facebook" aria-hidden="true"></i> <?php echo $companyName?> </a>
+                            
+                        </div>
 
-                        <div class="block-27-table-info">
+                        <div class="block-27-desc">
+                          <a href="http://<?php echo $igLink ?>"><i class="fa fa-instagram" aria-hidden="true"></i> <?php echo $companyName?> 
+                          </a>
+                        </div>
+
+                        <div class="block-27-desc">
+                          Phone No: <?php echo $phoneNo?> 
+                        </div>
+
+                        <div class="block-27-desc">
+                          Phone No: <?php echo $phoneNo?> 
+                        </div>
+
+                        <div class="block-27-desc"> <b>About </b> <br/><?php echo $description?></div>
+
+                        <div class="block-27-desc">
+                          Phone No: <?php echo $phoneNo?> 
+                        </div>
+                        <!-- <div class="block-27-table-info">
                           <form method="GET">
                             <table>
                               
@@ -134,7 +154,7 @@
                               
                             </table>
                           </form>
-                        </div>
+                        </div> -->
                       </div>
                       <!-- .block-27-info-->
 
@@ -170,7 +190,7 @@
               <div class="col-sm-12 col-specification">
                 <div class="specification-main mv-tab-style-3 mv-box-shadow-gray-1 mv-bg-white">
                   <ul role="tablist" class="tab-list nav nav-tabs">
-                    <li role="presentation" class="active"><a href="#tab31" aria-controls="tab31" role="tab" data-toggle="tab">Description</a></li>
+                    <li role="presentation" class="active"><a href="#tab31" aria-controls="tab31" role="tab" data-toggle="tab">Company Description</a></li>
                   </ul>
 
                   <div class="tab-content">
