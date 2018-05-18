@@ -1,11 +1,10 @@
 <?php
-require '../../vendor/autoload.php';
+require 'vendor/autoload.php';
 use App\Sessions;
 Sessions::init();
-
-	include("vendor_login_process.php");
 ?>
 <?php
+	include("vendor_login_process.php");
 	include("vendor_register_process.php");
 ?>
 
@@ -42,7 +41,7 @@ Sessions::init();
           <div class="container">
             <ul class="breadcrumb-1-list">
               <li><a href="home.html"><i class="fa fa-home"></i></a></li>
-              <li><a>Login/Register</a></li>
+              <li><a><i class="fa fa-pencil-square-o"></i></a></li>
             </ul>
           </div>
         </div>
@@ -58,7 +57,7 @@ Sessions::init();
                   <div class="form-header">
                     <div class="mv-title-style-13">
                       <div class="text-main">sign in</div>
-                      <div class="text-sub">Sign in with facebook and twitter box </div>
+                      <!-- <div class="text-sub">Sign in with facebook and twitter box </div> -->
                     </div>
                   </div>
                   <!-- .form-header-->
@@ -99,7 +98,7 @@ Sessions::init();
                   <div class="form-header">
                     <div class="mv-title-style-13">
                       <div class="text-main">create a new account</div>
-                      <div class="text-sub">Create an account to track your orders, create a wishlist and more</div>
+                      <!-- <div class="text-sub">Create an account to track your orders, create a wishlist and more</div> -->
                     </div>
                   </div>
                   <!-- .form-header-->
@@ -123,14 +122,14 @@ Sessions::init();
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Password</strong></div>
                       <div class="mv-field">
-                        <input name ="reg_password" type="password" value="<?php $vendorpassword?>" placeholder="enter password" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input name ="reg_password" type="password" value="<?php $vendorpassword?>" placeholder="enter your password" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Confirm Password</strong></div>
                       <div class="mv-field">
-                        <input name="reg_confirmpassword" type="password" name ="" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input name="reg_confirmpassword" type="password" placeholder="re-enter your password" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 

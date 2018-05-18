@@ -19,8 +19,9 @@
           <div class="container">
             <ul class="breadcrumb-1-list">
               <li><a href="index.php"><i class="fa fa-home"></i></a></li>
-              <li><a href="vendors.php"></i>  Vendors  </a></li>
-              <li><a> <?php echo $username ?>'s Profile</a></li>
+              <li><a href="vendors.php"><i class="fa fa-group"></i></a></li>
+              <!-- <li><a> <?php echo $username ?>'s Profile</a></li> -->
+              <li><a> <i class="fa fa-user"></i> </a></li>
             </ul>
           </div>
         </div>

@@ -36,7 +36,7 @@ Sessions::init();
           <div class="container">
             <ul class="breadcrumb-1-list">
               <li><a href="home.html"><i class="fa fa-home"></i></a></li>
-              <li><a>Login/Register</a></li>
+              <li><a><i class="fa fa-sign-in"></i></a></li>
             </ul>
           </div>
         </div>
