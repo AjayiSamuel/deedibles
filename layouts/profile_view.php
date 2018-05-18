@@ -19,7 +19,7 @@
           <div class="container">
             <ul class="breadcrumb-1-list">
               <li><a href="index.php"><i class="fa fa-home"></i></a></li>
-              <!-- <li><a href="product-grid-3.html">Product</a></li> -->
+              <li><a href="vendors.php"></i>  Vendors  </a></li>
               <li><a> <?php echo $username ?>'s Profile</a></li>
             </ul>
           </div>
@@ -39,21 +39,21 @@
                         <div class="block-26-gallery-main">
                           <div class="slider gallery-main">
                           <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="<?php echo $logo;?>" title="" class="mv-lightbox-item"><img src="<?php echo $logo;?>" alt="demo" class="block-26-main-img"/></a></div>
+                              <div class="slick-slide-inner"><a href="<?php echo $logo;?>" title="" class="mv-lightbox-item"><img src="<?php echo $logo;?>" alt="company logo" class="block-26-main-img"/></a></div>
                             </div>
                             <!-- .slick-slide-->
                             <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="<?php echo $firstImg;?>" title="" class="mv-lightbox-item"><img src="<?php echo $firstImg;?>" alt="demo" class="block-26-main-img"/></a></div>
-                            </div>
-                            <!-- .slick-slide-->
-
-                            <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="<?php echo $secondImg;?>" title="" class="mv-lightbox-item"><img src="<?php echo $secondImg;?>" alt="demo" class="block-26-main-img"/></a></div>
+                              <div class="slick-slide-inner"><a href="<?php echo $firstImg;?>" title="" class="mv-lightbox-item"><img src="<?php echo $firstImg;?>" alt="image" class="block-26-main-img"/></a></div>
                             </div>
                             <!-- .slick-slide-->
 
                             <div class="slick-slide">
-                              <div class="slick-slide-inner"><a href="<?php echo $thridImg;?>" title="" class="mv-lightbox-item"><img src="<?php echo $thridImg;?>" alt="demo" class="block-26-main-img"/></a></div>
+                              <div class="slick-slide-inner"><a href="<?php echo $secondImg;?>" title="" class="mv-lightbox-item"><img src="<?php echo $secondImg;?>" alt="image" class="block-26-main-img"/></a></div>
+                            </div>
+                            <!-- .slick-slide-->
+
+                            <div class="slick-slide">
+                              <div class="slick-slide-inner"><a href="<?php echo $thridImg;?>" title="" class="mv-lightbox-item"><img src="<?php echo $thridImg;?>" alt="image" class="block-26-main-img"/></a></div>
                             </div>
                             <!-- .slick-slide-->
 

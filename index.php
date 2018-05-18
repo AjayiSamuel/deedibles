@@ -129,30 +129,23 @@ Sessions::init();
 									<div class="name-inner mv-overflow-ellipsis">Promoted</div>
 								</div>
 								<div class="content-text">
-									<div class="content-price">$ 129.99</div>
-									<div class="content-desc"><a href="product-detail.html"
-									                             title="Caberg Riviera V2+ Italia Open Face Motorcycle Helmet"
-									                             class="mv-overflow-ellipsis">Caberg Riviera V2+ Italia
-											Open Face Motorcycle Helmet</a></div>
+									<div class="content-main"> Vendor's company name</div>
+									<div class="content-desc"><a href="vendor_profile.php"
+									                             title="Short description of vendors business"
+									                             class="mv-overflow-ellipsis">Details of the vendor</a></div>
 								</div>
 							</div>
 
-							<!-- <div class="content-hover">
+							<div class="content-hover">
 								<div class="content-button mv-btn-group text-center">
 									<div class="group-inner">
-										<button type="button" title="Add To Wishlist"
-										        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-											<i class="fa fa-heart-o"></i></button>
 										<button type="button" title="Add To Cart"
 										        class="mv-btn mv-btn-style-1 responsive-btn-1-type-1 btn-add-to-cart">
-											<span class="btn-inner"><i class="btn-icon fa fa-cart-plus"></i><span
-														class="btn-text">Add to cart</span></span></button>
-										<button type="button" title="Compare"
-										        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare"><i
-													class="fa fa-signal"></i></button>
+											<span class="btn-inner"><i class="btn-icon fa fa-user"></i><span
+														class="btn-text">View Vendor</span></span></button>
 									</div>
 								</div>
-							</div> -->
+							</div>
 						</div>
 					</article>
 
