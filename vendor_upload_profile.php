@@ -43,7 +43,7 @@ include 'layouts/header.php';
 					</div>
 
 					<div class="mv-form-group">
-                      <div class="mv-label"> <strong class="text-uppercase">Company's description</strong></div>
+                      <div class="mv-label"> <strong class="text-uppercase">Company bio/slogan</strong></div>
                       <div class="mv-field">
 					  <input name="description" type ="message" placeholder="enter your company's description" class="mv-inputbox mv-inputbox-style-1" required>
                       </div>
@@ -98,6 +98,13 @@ include 'layouts/header.php';
                       <div class="mv-field">
 											<input type="file" name="logo" placeholder="upload your company logo" required><span><?php echo "$logoError";?></span>
                       </div>
+          </div>
+          
+          <div class="mv-form-group">
+                      <div class="mv-label"> <strong class="text-uppercase">Background Image</strong></div>
+                      <div class="mv-field">
+											<input type="file" name="profilebackground" placeholder="upload your company logo" required><span><?php echo "$logoError";?></span>
+                      </div>
 					</div>
 
 					<div class="mv-form-group">
@@ -131,12 +138,6 @@ include 'layouts/header.php';
                       <div class="mv-field">
 						<textarea name="longcompanydesription" placeholder="Enter company description " class="mv-inputbox mv-inputbox-style-1" required style="resize:vertical;">
 </textarea>
-                      </div>
-					</div>
-					<div class="mv-form-group">
-                      <div class="mv-label"> <strong class="text-uppercase">Enter Address</strong></div>
-                      <div class="mv-field">
-					  <input name="address" type="text" value="<?php echo $address?>" class="mv-inputbox mv-inputbox-style-1" required>
                       </div>
 					</div>
 

@@ -38,6 +38,7 @@ if (!isset($_SESSION['id'])) {
 
 		//script that uploads logo
 		include("upload_logo.php");
+		//The sccript that updates the background picture
 		include("upload_background.php");
 		if ($uploadOk == 0) {
 			// exit;

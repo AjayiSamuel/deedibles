@@ -136,6 +136,10 @@
                         <div class="block-27-desc">
                           Phone No: <?php echo $phoneNo?> 
                         </div>
+
+                        <div class="block-27-desc">
+                        <i class="fa fa-home"></i> <?php echo $address?> 
+                        </div>
                         <!-- <div class="block-27-table-info">
                           <form method="GET">
                             <table>

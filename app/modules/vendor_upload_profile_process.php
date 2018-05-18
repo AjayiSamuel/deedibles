@@ -28,7 +28,8 @@ if (!isset($_SESSION['id'])) {
 		$vendorDate = date("d-m-Y");
 		//$vendorTime = date("h:i:sa");
 		$vendorAddress = $_POST['address'];
-
+		$vendorlongdescription = $_POST['longcompanydesription'];
+		
 		echo "$vendorDate";
 
 
@@ -41,21 +42,23 @@ if (!isset($_SESSION['id'])) {
 			exit;
 		}
 
-		$updateinput = "UPDATE `vendor_info` SET `company_name`= '$vendorCompanyname', `phone_number`='$vendorPhoneNumber',`company_description`='$vendordescription',`facebook_link`='$vendorFacebookLink',`instagram_link`='$vendorInstagramLink',`category`='$vendorCategory',`address`='$vendorAddress',`date`='$vendorDate' , `logo` = '$target_dir' WHERE `vendor_info`.`id` = '$vendorid' ";
+		$updateinput = "UPDATE `vendor_info` SET `company_name`= '$vendorCompanyname', `phone_number`='$vendorPhoneNumber',`company_description`='$vendordescription',`facebook_link`='$vendorFacebookLink',`instagram_link`='$vendorInstagramLink',`category`='$vendorCategory',`address`='$vendorAddress',`date`='$vendorDate' , `long_company_description`='$vendorlongdescription' , `logo` = '$target_dir' WHERE `vendor_info`.`id` = '$vendorid' ";
 
 		//section for uploading logo and images
 
 		//allowed images types
 		$allowed = array('jpg', 'jpeg', 'png', 'gif', 'svg', 'tiff');
 
+		//script that uploads background photo
+		include("upload_backgroud.php");
 
 		//script that uploads the image one
 		include("upload_image1.php");
 
-		//script that uploads the image one
+		//script that uploads the image two
 		include("upload_image2.php");
 
-		//script that uploads the image one
+		//script that uploads the image three
 		include("upload_image3.php");
 
 		echo "<br> input to database successful";
