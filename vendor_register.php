@@ -1,5 +1,18 @@
 <?php
 include("app/modules/vendor_register_process.php");
+if(!$vendorusername){
+  $vendorusername="";
+}
+if(!$vendoremail){
+  $vendoremail="";
+}
+if(!$vendorpassword){
+  $vendorpassword="";
+}
+if(!$vendorconfirmpassword){
+  $vendorconfirmpassword="";
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -51,16 +64,15 @@ include("app/modules/vendor_register_process.php");
                   <div class="form-header">
                     <div class="mv-title-style-13">
                       <div class="text-main">create a new account</div>
-                      <!-- <div class="text-sub">Create an account to track your orders, create a wishlist and more</div> -->
                     </div>
                   </div>
                   <!-- .form-header-->
-
+                  <p style="color:red; font size:9px;"><?php echo $usernameerror; echo $passworderror; echo $emailerror;?> </p>
                   <div class="form-body">
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Username</strong></div>
                       <div class="mv-field">
-                        <input name ="reg_username" type="text" value="<?php $vendorusername ?>" placeholder="Enter your username (E.g 'AjayiSamuel')" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input value="<?php echo $vendorusername?>" name ="reg_username" type="text" placeholder="Enter your username (E.g 'AjayiSamuel')" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
@@ -68,21 +80,21 @@ include("app/modules/vendor_register_process.php");
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Email</strong></div>
                       <div class="mv-field">
-                        <input name ="reg_email" type="email" value="<?php $vendoremail ?>" placeholder="enter your email" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input value="<?php echo $vendoremail?>" name ="reg_email" type="email" placeholder="enter your email" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Password</strong></div>
                       <div class="mv-field">
-                        <input name ="reg_password" type="password" value="<?php $vendorpassword?>" placeholder="enter your password" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input value="<?php echo $vendorpassword?>" name ="reg_password" type="password" placeholder="enter your password" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Confirm Password</strong></div>
                       <div class="mv-field">
-                        <input name="reg_confirmpassword" type="password" placeholder="re-enter your password" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input value="<?php echo $vendorconfirmpassword?>" name="reg_confirmpassword" type="password" placeholder="re-enter your password" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
