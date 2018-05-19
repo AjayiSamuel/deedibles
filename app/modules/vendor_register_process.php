@@ -86,7 +86,7 @@ if ($_POST) {
 						$vendorid = $row["id"];
 						$_SESSION['id'] = $vendorid;
 						echo "<br> the id no is $vendorid <br>";
-						header("Location:../../vendor_upload_profile.php");
+						header("Location:vendor_upload_profile.php");
 
 						##$sqlinsertkey = "INSERT INTO vendor_profile (id_key) VALUES ('$vendorid')";
 						##$insertkeyquery = mysqli_query($conn,$sqlinsertkey);
