@@ -1,11 +1,12 @@
 <?php
-require 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
 use App\Sessions;
 Sessions::init();
 ?>
 <?php
-	include("vendor_login_process.php");
-	include("vendor_register_process.php");
+  // include("vendor_login_process.php");
+  include('.:/opt/lampp/lib/php');
+  include("vendor_register_process.php");
 ?>
 
 
@@ -29,7 +30,7 @@ Sessions::init();
         <div data-image-src="images/background/demo_bg_1920x1680.png" class="mv-banner-style-1 mv-bg-overlay-dark overlay-0-85 mv-parallax">
           <div class="page-name mv-caption-style-6">
             <div class="container">
-              <div class="mv-title-style-9"><span class="main">Login - Register</span><img src="images/icon/icon_line_polygon_line.png" alt="icon" class="line"/></div>
+              <div class="mv-title-style-9"><span class="main">Register</span><img src="images/icon/icon_line_polygon_line.png" alt="icon" class="line"/></div>
             </div>
           </div>
         </div>

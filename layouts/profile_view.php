@@ -109,9 +109,21 @@
                       <div class="block-27-info">
                         <div class="block-27-title"><?php echo $companyName?></div>
 
+                        <div class="block-27-desc"> <i class="fa fa-circle"></i> <?php echo $description?></div>
+
+                        <div class="block-27-desc">
+                        <i class="fa fa-tags"></i>
+                           <?php echo $category?> 
+                        </div>
+
                         <div class="block-27-desc">
                         <i class="fa fa-phone" aria-hidden="true"></i>
                            <?php echo $phoneNo?> 
+                        </div>
+
+
+                        <div class="block-27-desc">
+                        <i class="fa fa-home"></i> <?php echo $address?> 
                         </div>
 
                         <div class="block-27-desc">
@@ -125,22 +137,9 @@
                         </div>
 
                         <div class="block-27-desc">
-                          Phone No: <?php echo $phoneNo?> 
+                          <a href="mailto:name@email.com"><i class="fa fa-envelope"></i> Send a mail</a>
                         </div>
 
-                        <div class="block-27-desc">
-                          Phone No: <?php echo $phoneNo?> 
-                        </div>
-
-                        <div class="block-27-desc"> <b>About </b> <br/><?php echo $description?></div>
-
-                        <div class="block-27-desc">
-                          Phone No: <?php echo $phoneNo?> 
-                        </div>
-
-                        <div class="block-27-desc">
-                        <i class="fa fa-home"></i> <?php echo $address?> 
-                        </div>
                         <!-- <div class="block-27-table-info">
                           <form method="GET">
                             <table>
@@ -195,7 +194,7 @@
               <div class="col-sm-12 col-specification">
                 <div class="specification-main mv-tab-style-3 mv-box-shadow-gray-1 mv-bg-white">
                   <ul role="tablist" class="tab-list nav nav-tabs">
-                    <li role="presentation" class="active"><a href="#tab31" aria-controls="tab31" role="tab" data-toggle="tab">Company Description</a></li>
+                    <li role="presentation" class="active"><a href="#tab31" aria-controls="tab31" role="tab" data-toggle="tab"><i class="fa fa-info-circle"></i> About <?php echo $companyName?></a></li>
                   </ul>
 
                   <div class="tab-content">

@@ -24,7 +24,7 @@ Sessions::init();
         <div data-image-src="images/background/demo_bg_1920x1680.png" class="mv-banner-style-1 mv-bg-overlay-dark overlay-0-85 mv-parallax">
           <div class="page-name mv-caption-style-6">
             <div class="container">
-              <div class="mv-title-style-9"><span class="main">Login - Register</span><img src="images/icon/icon_line_polygon_line.png" alt="icon" class="line"/></div>
+              <div class="mv-title-style-9"><span class="main">Login</span><img src="images/icon/icon_line_polygon_line.png" alt="icon" class="line"/></div>
             </div>
           </div>
         </div>
@@ -115,14 +115,14 @@ Sessions::init();
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Password</strong></div>
                       <div class="mv-field">
-                        <input name="reg_password" type="password" value="" placeholder="enter password" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input name="reg_password" type="password" value="" placeholder="enter your password" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Confirm Password</strong></div>
                       <div class="mv-field">
-                        <input name="reg_confirmpassword" type="password" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input name="reg_confirmpassword" type="password" placeholder="re-enter your password" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
