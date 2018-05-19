@@ -58,7 +58,7 @@ if(!$vendorconfirmpassword){
         <div class="container">
           <div class="row">
 
-            <div class="col-sm-6 col-register" style="positon:center;">
+            <div class="col-sm-6 col-register">
               <div class="mv-form-style-1 mv-box-shadow-gray-1">
                 <form method="POST" class="form-register">
                   <div class="form-header">
@@ -67,7 +67,7 @@ if(!$vendorconfirmpassword){
                     </div>
                   </div>
                   <!-- .form-header-->
-                  <p style="color:red; font size:9px;"><?php echo $usernameerror; echo $passworderror; echo $emailerror;?> </p>
+                  <p style="color:red; font-size:9px;"><?php echo $usernameerror; echo $passworderror; echo $emailerror;?> </p>
                   <div class="form-body">
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Username</strong></div>
