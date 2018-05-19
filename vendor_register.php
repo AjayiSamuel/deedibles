@@ -1,13 +1,6 @@
 <?php
-require_once 'vendor/autoload.php';
-use App\Sessions;
-Sessions::init();
+include("app/modules/vendor_register_process.php");
 ?>
-<?php
-  // include("vendor_login_process.php");
-  include("vendor_register_process.php");
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,48 +44,8 @@ Sessions::init();
       <section class="mv-main-body login-main mv-bg-gray mv-wrap">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6 col-login">
-              <div class="mv-form-style-1 mv-box-shadow-gray-1">
-                <form method="POST" class="form-login">
-                  <div class="form-header">
-                    <div class="mv-title-style-13">
-                      <div class="text-main">sign in</div>
-                      <!-- <div class="text-sub">Sign in with facebook and twitter box </div> -->
-                    </div>
-                  </div>
-                  <!-- .form-header-->
-            
-                  <div class="form-body">
-                    <div class="mv-form-group">
-                      <div class="mv-label"> <strong class="text-uppercase">Email</strong></div>
-                      <div class="mv-field">
-                        <input type="email" name="login_email" placeholder="enter your email" class="mv-inputbox mv-inputbox-style-1"/>
-                      </div>
-                    </div>
 
-                    <div class="mv-form-group">
-                      <div class="mv-label"> <strong class="text-uppercase">Password</strong></div>
-                      <div class="mv-field">
-                        <input type="password" name="login_password" placeholder="enter your password" class="mv-inputbox mv-inputbox-style-1"/>
-                      </div>
-                    </div>
-
-                    <div class="mv-form-group submit-button mv-mt-30">
-                      <button type="submit" class="mv-btn mv-btn-style-5 btn-login" name="submit_login" value="login">Login</button>
-                      <label class="mv-checkbox mv-checkbox-style-1 checkbox-remember">
-                        <input type="checkbox" name="test138" class="hidden"/><span class="checkbox-after-input"><span class="checkbox-visual-box"><span class="icon-checked fa fa-check"></span></span><span class="checkbox-text">Remember me</span></span>
-                      </label>
-                    </div>
-
-                    <div class="mv-form-group"><a href="forgot-password.html" class="btn-forgot-pass">Forgot your password?</a></div>
-                  </div>
-                  <!-- .form-body-->
-                </form>
-                <!-- .form-login-->
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-register">
+            <div class="col-sm-6 col-register" style="positon:center;">
               <div class="mv-form-style-1 mv-box-shadow-gray-1">
                 <form method="POST" class="form-register">
                   <div class="form-header">

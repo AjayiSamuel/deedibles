@@ -1,9 +1,8 @@
 <?php
-require '../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 use App\Database as DB;
 use App\Sessions;
-
 Sessions::init();
 
 $servername = "localhost";
