@@ -5,7 +5,6 @@ Sessions::init();
 ?>
 <?php
   // include("vendor_login_process.php");
-  include('.:/opt/lampp/lib/php');
   include("vendor_register_process.php");
 ?>
 
