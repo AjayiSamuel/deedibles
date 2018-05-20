@@ -1,9 +1,8 @@
 <?php
-require '../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 use App\Database as DB;
 use App\Sessions;
-
 Sessions::init();
 
 $servername = "localhost";
@@ -11,43 +10,29 @@ $username = "root";
 $password = "Spellingbee@1";
 $dbname = "vendordb";
 
-//declaring log variables
-$passworderror = "";
-$passwordstatus = "";
-$databaseerror = "";
-$databasestatus = "";
-$usernameerror = "";
-$emailerror = "";
-$error = "";
-$status = "";
+//initializing variables  
+$vendorusername="";
+$vendoremail="";
+$vendorpassword="";
+$vendorconfirmpassword="";
+
+//declaring error and status log variables
+$passworderror = ""; //holds value is password error occurs
+$usernameerror = ""; //if name duplication occurs
+$emailerror = ""; //if email duplication occurs
+$error = ""; //holds value if data was not insertted into the database
+$status = ""; //holds the value of registration success
 
 if ($_POST) {
-
-	$status = "Post validation succcess... <br>";
 	$vendorusername = $_POST['reg_username'];
 	$vendoremail = $_POST['reg_email'];
 	$vendorpassword = $_POST['reg_password'];
 	$vendorconfirmpassword = $_POST['reg_confirmpassword'];
 
-	$_SESSION['username'] = $vendorusername;
-
-	//echo $vendorusername,"<br>";
-	//echo $vendoremail,"<br>";
-	//echo $vendorpassword,"<br>";
-	//echo $vendorconfirmpassword,"<br>";
-
-	//list of error messages variables
-	$passworderror = "";
-	$passwordstatus = "";
-	$databaseerror = "";
-	$databasestatus = "";
-	$usernameerror = "";
-	$emailerror = "";
-	$status = "";
+	$_SESSION['username'] = $_POST['reg_username'];
 
 	if ($vendorpassword != $vendorconfirmpassword) {
 		$passworderror = "your password does not match <br>";
-		//echo $passworderror;
 	} else {
 		$conn = DB::_db();
 
@@ -55,23 +40,16 @@ if ($_POST) {
 		$sqlusername = mysqli_query($conn, "SELECT vendor_username FROM vendor_info WHERE vendor_username='$vendorusername' ");
 		$usernamecheck = mysqli_num_rows($sqlusername);
 		if ($usernamecheck >= 1) {
-			$usernameerror = " username '$vendorusername' has been taken by another user";
-			echo $usernameerror;
+			$usernameerror = " username <b>'$vendorusername'</b> has been taken by another user";
 		} else {
-			echo "There is no duplicate '$vendorusername' in the database <br>";
-			//checking for email duplication
 			$sqlemail = mysqli_query($conn, "SELECT vendor_email FROM vendor_info WHERE vendor_email='$vendoremail' ");
 			$emailcheck = mysqli_num_rows($sqlemail);
 			if ($emailcheck >= 1) {
-				$emailerror = "$vendoremail has been used by another user";
-				echo $emailerror;
+				$emailerror = " <b>'$vendoremail'</b> has been used by another user";
 			} else {
-
-				echo "No duplicate of email in database";
 				//inserting variables into the database
 				$sqlinsert = "INSERT INTO vendor_info( vendor_username, vendor_email, vendor_password) VALUES( '$vendorusername', '$vendoremail', '$vendorpassword')";
 				$insertquery = mysqli_query($conn, $sqlinsert);
-				//echo "$insertquery value of insertion <br>";
 
 				$registrationstatus = mysqli_affected_rows($conn);
 				if ($registrationstatus) {
@@ -87,22 +65,7 @@ if ($_POST) {
 						$vendorid = $row["id"];
 						$_SESSION['id'] = $vendorid;
 						echo "<br> the id no is $vendorid <br>";
-						header("Location:../../vendor_upload_profile.php");
-
-						##$sqlinsertkey = "INSERT INTO vendor_profile (id_key) VALUES ('$vendorid')";
-						##$insertkeyquery = mysqli_query($conn,$sqlinsertkey);
-						/**
-						 * if($insertkeyquery)
-						 * {
-						 * $_SESSION['key'] = $vendorid;
-						 * echo "<br> Key inserted successfully <br>";
-						 * header("Location:vendor_upload_profile.php");
-						 * }
-						 * else
-						 * {
-						 * echo "<br>could not insert key into vendor_profile<br>";
-						 * }
-						 **/
+						header("Location:vendor_upload_profile.php");
 					}
 
 				} else {
@@ -114,7 +77,7 @@ if ($_POST) {
 		}
 	}
 } else {
-	//echo "access denied";
+	$error = "access denied";
 }
 
 ?>

@@ -41,7 +41,7 @@ Sessions::init();
 							</div>
 							<a href="vendors.php"
 							   class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2"><span
-										class="btn-inner"><i class="btn-icon fa fa-eye"></i>
+										class="btn-inner"><i class="btn-icon fa fa-users"></i>
 										<span class="btn-text">Check Out Vendors</span></span>
 							</a>
 						</div>
@@ -63,7 +63,7 @@ Sessions::init();
 							</div>
 							<a href="vendors.php"
 							   class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2">
-							   <span class="btn-inner"><i class="btn-icon fa fa-eye"></i>
+							   <span class="btn-inner"><i class="btn-icon fa fa-users"></i>
 									<span class="btn-text">Check Out Vendors</span>
 								</span>
 							</a>
@@ -86,7 +86,7 @@ Sessions::init();
 							</div>
 							<a href="vendors.php"
 							   class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2"><span
-										class="btn-inner"><i class="btn-icon fa fa-eye"></i>
+										class="btn-inner"><i class="btn-icon fa fa-users"></i>
 										<span class="btn-text">Check Out Vendors</span></span>
 							</a>
 						</div>
@@ -110,39 +110,60 @@ Sessions::init();
 					<article class="col-xs-6 col-sm-4 item post">
 						<div class="item-inner mv-effect-translate-1">
 							<div class="content-thumb">
-								<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-								                                               title="Caberg Riviera V2+ Italia Open Face Motorcycle Helmet"><img
-												src="images/demo/demo_300x400.png" alt="demo"
-												class="mv-effect-item"/></a><a href="product-detail.html"
-								                                               title="Caberg Riviera V2+ Italia Open Face Motorcycle Helmet"
-								                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-												class="btn-inner"></span></a>
-
+								<div class="thumb-inner mv-effect-relative">
+									<a href="product-detail.html" title="Alpinestars GP Plus R Leather Motorcycle Jacket">
+										<img src="images/demo/demo_300x400.png" alt="demo" class="mv-effect-item"/>
+									</a>
+									<a href="product-detail.html" title="Alpinestars GP Plus R Leather Motorcycle Jacket" class="">
+										<span class="btn-inner">
+					
+										</span>
+									</a>
 									<div class="content-message mv-message-style-1">
-										<div class="message-inner"></div>
+										<div class="message-inner">
+
+										</div>
 									</div>
 								</div>
 							</div>
 
 							<div class="content-main">
 								<div class="content-name hidden-xs hidden-sm">
-									<div class="name-inner mv-overflow-ellipsis">Promoted</div>
+									<div class="name-inner mv-overflow-ellipsis">
+										Promoted
+									</div>
 								</div>
 								<div class="content-text">
-									<div class="content-main"> Vendor's company name</div>
-									<div class="content-desc"><a href="vendor_profile.php"
-									                             title="Short description of vendors business"
-									                             class="mv-overflow-ellipsis">Details of the vendor</a></div>
+									<div class="content-price">
+										<br/><br/>
+										company name
+									</div>
+									<div class="content-desc">
+                      					<a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" 		class="mv-overflow-ellipsis">
+                      						<i class="fa fa-tag"></i>
+											company's category
+										</a>
+									</div>
+									<div class="content-desc">
+										<a href="product-detail.html" title="" class="mv-overflow-ellipsis">
+											<i class="fa fa-user"></i>
+											company details 
+										</a>
+									</div>
 								</div>
 							</div>
 
 							<div class="content-hover">
 								<div class="content-button mv-btn-group text-center">
 									<div class="group-inner">
-										<button type="button" title="Add To Cart"
-										        class="mv-btn mv-btn-style-1 responsive-btn-1-type-1 btn-add-to-cart">
-											<span class="btn-inner"><i class="btn-icon fa fa-user"></i><span
-														class="btn-text">View Vendor</span></span></button>
+										<button type="button" title="View vendor" class="mv-btn mv-btn-style-1 responsive-btn-1-type-1 btn-add-to-cart">
+											<span class="btn-inner">
+												<i class="btn-icon fa fa-user"></i>
+												<span class="btn-text">
+													view vendor
+												</span>
+											</span>
+										</button>
 									</div>
 								</div>
 							</div>
@@ -152,46 +173,60 @@ Sessions::init();
 					<article class="col-xs-6 col-sm-4 item post">
 						<div class="item-inner mv-effect-translate-1">
 							<div class="content-thumb">
-								<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-								                                               title="Alpinestars GP Plus R Leather Motorcycle Jacket"><img
-												src="images/demo/demo_300x400.png" alt="demo"
-												class="mv-effect-item"/></a><a href="product-detail.html"
-								                                               title="Alpinestars GP Plus R Leather Motorcycle Jacket"
-								                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-												class="btn-inner"></span></a>
-
+								<div class="thumb-inner mv-effect-relative">
+									<a href="product-detail.html" title="Alpinestars GP Plus R Leather Motorcycle Jacket">
+										<img src="images/demo/demo_300x400.png" alt="demo" class="mv-effect-item"/>
+									</a>
+									<a href="product-detail.html" title="Alpinestars GP Plus R Leather Motorcycle Jacket" class="">
+										<span class="btn-inner">
+					
+										</span>
+									</a>
 									<div class="content-message mv-message-style-1">
-										<div class="message-inner"></div>
+										<div class="message-inner">
+
+										</div>
 									</div>
 								</div>
 							</div>
 
 							<div class="content-main">
 								<div class="content-name hidden-xs hidden-sm">
-									<div class="name-inner mv-overflow-ellipsis">Promoted</div>
+									<div class="name-inner mv-overflow-ellipsis">
+										Promoted
+									</div>
 								</div>
 								<div class="content-text">
-									<div class="content-price">$ 250.00</div>
-									<div class="content-desc"><a href="product-detail.html"
-									                             title="Alpinestars GP Plus R Leather Motorcycle Jacket"
-									                             class="mv-overflow-ellipsis">Alpinestars GP Plus R
-											Leather Motorcycle Jacket</a></div>
+									<div class="content-price">
+										<br/><br/>
+										company name
+									</div>
+									<div class="content-desc">
+                      					<a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" 		class="mv-overflow-ellipsis">
+                      						<i class="fa fa-tag"></i>
+											company's category
+										</a>
+									</div>
+									<div class="content-desc">
+										<a href="product-detail.html" title="" class="mv-overflow-ellipsis">
+											<i class="fa fa-user"></i>
+											company details 
+										</a>
+									</div>
 								</div>
 							</div>
 
 							<div class="content-hover">
 								<div class="content-button mv-btn-group text-center">
 									<div class="group-inner">
-										<button type="button" title="Add To Wishlist"
-										        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-											<i class="fa fa-heart-o"></i></button>
-										<button type="button" title="Add To Cart"
-										        class="mv-btn mv-btn-style-1 responsive-btn-1-type-1 btn-add-to-cart">
-											<span class="btn-inner"><i class="btn-icon fa fa-cart-plus"></i><span
-														class="btn-text">Add to cart</span></span></button>
-										<button type="button" title="Compare"
-										        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare"><i
-													class="fa fa-signal"></i></button>
+										<button type="button" title="View vendor" class="mv-btn mv-btn-style-1 responsive-btn-1-type-1 btn-add-to-cart">
+											<span class="btn-inner">
+												<i class="btn-icon fa fa-user"></i>
+												<span class="btn-text">
+													view vendor
+												</span>
+											</span>
+										</button>
 									</div>
 								</div>
 							</div>
@@ -201,49 +236,63 @@ Sessions::init();
 					<article class="col-xs-6 col-sm-4 item post">
 						<div class="item-inner mv-effect-translate-1">
 							<div class="content-thumb">
-								<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-								                                               title="Rtd Tractech Evo Blue Moto Sports Leather Gloves"><img
-												src="images/demo/demo_300x400.png" alt="demo"
-												class="mv-effect-item"/></a><a href="product-detail.html"
-								                                               title="Rtd Tractech Evo Blue Moto Sports Leather Gloves"
-								                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-												class="btn-inner"></span></a>
-
+								<div class="thumb-inner mv-effect-relative">
+									<a href="product-detail.html" title="Alpinestars GP Plus R Leather Motorcycle Jacket">
+										<img src="images/demo/demo_300x400.png" alt="demo" class="mv-effect-item"/>
+									</a>
+									<a href="product-detail.html" title="Alpinestars GP Plus R Leather Motorcycle Jacket" class="">
+										<span class="btn-inner">
+					
+										</span>
+									</a>
 									<div class="content-message mv-message-style-1">
-										<div class="message-inner"></div>
+										<div class="message-inner">
+
+										</div>
 									</div>
 								</div>
 							</div>
 
 							<div class="content-main">
 								<div class="content-name hidden-xs hidden-sm">
-									<div class="name-inner mv-overflow-ellipsis">Promoted</div>
+									<div class="name-inner mv-overflow-ellipsis">
+										Promoted
+									</div>
 								</div>
 								<div class="content-text">
-									<div class="content-price">$ 189.99</div>
-									<div class="content-desc"><a href="product-detail.html"
-									                             title="Rtd Tractech Evo Blue Moto Sports Leather Gloves"
-									                             class="mv-overflow-ellipsis">Rtd Tractech Evo Blue Moto
-											Sports Leather Gloves</a></div>
+									<div class="content-price">
+										<br/><br/>
+										company name
+									</div>
+									<div class="content-desc">
+                      					<a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" 		class="mv-overflow-ellipsis">
+                      						<i class="fa fa-tag"></i>
+											company's category
+										</a>
+									</div>
+									<div class="content-desc">
+										<a href="product-detail.html" title="" class="mv-overflow-ellipsis">
+											<i class="fa fa-user"></i>
+											company details 
+										</a>
+									</div>
 								</div>
 							</div>
 
-							<!-- <div class="content-hover">
+							<div class="content-hover">
 								<div class="content-button mv-btn-group text-center">
 									<div class="group-inner">
-										<button type="button" title="Add To Wishlist"
-										        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-											<i class="fa fa-heart-o"></i></button>
-										<button type="button" title="Add To Cart"
-										        class="mv-btn mv-btn-style-1 responsive-btn-1-type-1 btn-add-to-cart">
-											<span class="btn-inner"><i class="btn-icon fa fa-cart-plus"></i><span
-														class="btn-text">Add to cart</span></span></button>
-										<button type="button" title="Compare"
-										        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare"><i
-													class="fa fa-signal"></i></button>
+										<button type="button" title="View vendor" class="mv-btn mv-btn-style-1 responsive-btn-1-type-1 btn-add-to-cart">
+											<span class="btn-inner">
+												<i class="btn-icon fa fa-user"></i>
+												<span class="btn-text">
+													view vendor
+												</span>
+											</span>
+										</button>
 									</div>
 								</div>
-							</div> -->
+							</div>
 						</div>
 					</article>
 				</div>
@@ -1185,7 +1234,7 @@ Sessions::init();
 			<div class="block-list-1">
 				<div class="mv-block-style-3">
 				<a href="vendors.php"class="caption-1-button-1 mv-btn mv-btn-style-1 responsive-btn-1-type-2">
-					<span class="btn-inner"><i class="btn-icon fa fa-eye"></i>
+					<span class="btn-inner"><i class="btn-icon fa fa-users"></i>
 						<span class="btn-text">Check Out Vendors</span>
 					</span>
 				</a>
