@@ -136,29 +136,14 @@
                           </a>
                         </div>
 
-                        <div class="block-27-desc">
-                          <a href="mailto:name@email.com"><i class="fa fa-envelope"></i> Send a mail</a>
+                         <div class="block-27-desc">
+                          <a href="http://<?php echo $igLink ?>"><i class="fa fa-instagram" aria-hidden="true"></i> <?php echo $companyName?> 
+                          </a>
                         </div>
 
-                        <!-- <div class="block-27-table-info">
-                          <form method="GET">
-                            <table>
-                              
-                              <tr>
-                                <td>Categories:</td>
-                                <td>
-                                  <div class="mv-list-inline-style-2">
-                                    <ul class="list-inline-2">
-                                      <li class="active"><a href="#" class="mv-btn"><?php echo $category?></a></li>
-                                      
-                                    </ul>
-                                  </div>
-                                </td>
-                              </tr>
-                              
-                            </table>
-                          </form>
-                        </div> -->
+                        <div class="block-27-desc">
+                          <i class="fa fa-envelope"></i> Email:<a href="mailto:name@<?php echo $vendoremail?>"> <?php echo $vendoremail?> </a>
+                        </div>
                       </div>
                       <!-- .block-27-info-->
 

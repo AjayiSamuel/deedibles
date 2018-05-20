@@ -40,7 +40,7 @@ Sessions::init();
         <div data-image-src="images/background/demo_bg_1920x1680.png" class="mv-banner-style-1 mv-bg-overlay-dark overlay-0-85 mv-parallax">
           <div class="page-name mv-caption-style-6">
             <div class="container">
-              <div class="mv-title-style-9"><span class="main">product 3 columns</span><img src="images/icon/icon_line_polygon_line.png" alt="icon" class="line"/></div>
+              <div class="mv-title-style-9"><span class="main">Our Vendors</span><img src="images/icon/icon_line_polygon_line.png" alt="icon" class="line"/></div>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ Sessions::init();
           <div class="container">
             <ul class="breadcrumb-1-list">
               <li><a href="home.html"><i class="fa fa-home"></i></a></li>
-              <li><a href="vendors.php"><i class="fa fa-refresh"></i>  Vendors  </a></li>
+              <li><a href="vendors.php"><i class="fa fa-users"></i></li>
             </ul>
           </div>
         </div>
@@ -69,28 +69,47 @@ Sessions::init();
                 <div class="item-inner mv-effect-translate-1 mv-box-shadow-gray-1">
                   <div class="content-thumb">
                     <div class="thumb-inner mv-effect-relative">
-                    <a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" title="RST Full Zipped Sweatshirt">
-                    <img src="<?php echo $vendor['logo'];?>" alt="demo" class="mv-effect-item"/>
-                    </a><a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" title="<?php echo $vendor['company_name'];?>" class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs">
+                    <a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" title="<?php echo $vendor['company_name'];?>">
+                    <img src="<?php echo $vendor['logo'];?>" alt="<?php echo $vendor['company_name'];?>  profile image" class="mv-effect-item"/>
+                    </a><a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" title="<?php echo $vendor['company_name'];?>" >
+                    <!--
+                      class responsible for plus sign on image in above <a> tag
+                      class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"
+                    -->
                     <span class="btn-inner"></span>
                     </a>
                       <div class="content-message mv-message-style-1">
-                        <div class="message-inner"></div>
+                        <div class="message-inner">sgdjdk</div>
                       </div>
                     </div>
                   </div>
 
                   <div class="content-default">
-                    <div class="content-price"><span class="new-price">$ 128.24</span><span class="old-price">$ 170.99</span></div>
+                    <div class="content-price">
+                      <span class="new-price"><?php echo $vendor['company_name'];?>
+                      </span>
+                    </div>
 
-                    <div class="content-desc"><a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" title="RST Full Zipped Sweatshirt" class="mv-overflow-ellipsis"><?php echo $vendor['company_name'];?></a></div>
+                    <div class="content-desc">
+                      <a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" class="mv-overflow-ellipsis">
+                      <i class="fa fa-tag"></i>
+                      <?php echo $vendor['category'];?>
+                      </a>
+                    </div>
+
+                    <div class="content-desc">
+                      <span class="new-price">
+                        <i class="fa fa-circle"></i>
+                        <?php echo $vendor['company_description'];?>
+                      </span>
+                    </div>
                   </div>
 
                   <div class="content-hover">
                     <div class="content-button mv-btn-group text-center mv-lightbox-style-1">
                       <div class="group-inner">
                         <!-- <button type="button" class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist"><i class="fa fa-heart-o"></i></button> -->
-                        <a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" class="mv-btn mv-btn-style-1 responsive-btn-1-type-1 btn-compare"><span class="btn-inner"><i class="btn-icon fa fa-signal"></i><span class="btn-text">view</span></span></a>
+                        <a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" class="mv-btn mv-btn-style-1 responsive-btn-1-type-1 btn-compare"><span class="btn-inner"><i class="btn-icon fa fa-user"></i><span class="btn-text">view</span></span></a>
                         <!-- <button type="button" class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart"><i class="fa fa-cart-plus"></i></button><a href="images/demo/demo_80.png" title="RST Full Zipped Sweatshirt" data-lightbox-href="product-detail.html" style="margin-right: 0;" class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-zoom mv-lightbox-item hidden-xs"><i class="fa fa-search"></i></a><a href="images/demo/demo_14.png" title="RST Full Zipped Sweatshirt" data-lightbox-href="product-detail.html" class="mv-lightbox-item hidden"></a> -->
                       </div>
                     </div>
