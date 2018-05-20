@@ -41,9 +41,7 @@ if ($_POST) {
 		$usernamecheck = mysqli_num_rows($sqlusername);
 		if ($usernamecheck >= 1) {
 			$usernameerror = " username <b>'$vendorusername'</b> has been taken by another user";
-			//echo $usernameerror;
 		} else {
-			//checking for email duplication
 			$sqlemail = mysqli_query($conn, "SELECT vendor_email FROM vendor_info WHERE vendor_email='$vendoremail' ");
 			$emailcheck = mysqli_num_rows($sqlemail);
 			if ($emailcheck >= 1) {
