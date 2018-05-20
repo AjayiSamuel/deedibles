@@ -185,7 +185,7 @@
                   <div class="tab-content">
                     <div id="tab31" role="tabpanel" class="tab-pane active">
                       <?php
-echo $longdescription;
+                        echo $longdescription;
                       ?>
                     </div>
                   </div>

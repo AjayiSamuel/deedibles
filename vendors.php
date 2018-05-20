@@ -69,18 +69,16 @@ Sessions::init();
                 <div class="item-inner mv-effect-translate-1 mv-box-shadow-gray-1">
                   <div class="content-thumb">
                     <div class="thumb-inner mv-effect-relative">
-                    <a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" title="<?php echo $vendor['company_name'];?>">
-                    <img src="<?php echo $vendor['logo'];?>" alt="<?php echo $vendor['company_name'];?>  profile image" class="mv-effect-item"/>
-                    </a><a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" title="<?php echo $vendor['company_name'];?>" >
-                    <!--
-                      class responsible for plus sign on image in above <a> tag
-                      class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"
-                    -->
-                    <span class="btn-inner"></span>
-                    </a>
-                      <div class="content-message mv-message-style-1">
-                        <div class="message-inner">sgdjdk</div>
-                      </div>
+                      <a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" title="<?php echo $vendor['company_name'];?>">
+                        <img src="<?php echo $vendor['logo'];?>" alt="<?php echo $vendor['company_name'];?>  profile image" class="mv-effect-item"/>
+                      </a>
+                      <a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" title="<?php echo $vendor['company_name'];?>" >
+                        <!--
+                          class responsible for plus sign on image in above <a> tag
+                          class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"
+                        -->
+                      <span class="btn-inner"></span>
+                      </a>
                     </div>
                   </div>
 

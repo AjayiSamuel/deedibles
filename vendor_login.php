@@ -77,7 +77,7 @@ include("app/modules/vendor_login_process.php");
                     </div>
 
                     <div class="mv-form-group submit-button mv-mt-30">
-                      <button type="submit" class="mv-btn mv-btn-style-5 btn-login" name="submit_login" value="login">Login</button>
+                      <button type="submit" class="mv-btn mv-btn-style-5 btn-login" name="submit_login" value="login"><i class="fa fa-sign-in"></i> Login</button>
                       <label class="mv-checkbox mv-checkbox-style-1 checkbox-remember">
                         <input type="checkbox" name="test138" class="hidden"/><span class="checkbox-after-input"><span class="checkbox-visual-box"><span class="icon-checked fa fa-check"></span></span><span class="checkbox-text">Remember me</span></span>
                       </label>

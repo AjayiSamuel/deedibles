@@ -86,7 +86,9 @@ include("app/modules/vendor_register_process.php");
                     </div>
 
                     <div class="mv-form-group submit-button mv-mt-30">
-                      <button type="submit" class="mv-btn mv-btn-style-5 btn-signup">sign up</button>
+                      <button type="submit" class="mv-btn mv-btn-style-5 btn-signup">
+                      <i class="fa fa-pencil-square-o"></i>
+                      sign up</button>
                     </div>
                   </div>
                   <!-- .form-body-->
