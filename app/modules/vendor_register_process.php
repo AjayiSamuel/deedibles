@@ -10,6 +10,12 @@ $username = "root";
 $password = "Spellingbee@1";
 $dbname = "vendordb";
 
+//initializing variables  
+$vendorusername="";
+$vendoremail="";
+$vendorpassword="";
+$vendorconfirmpassword="";
+
 //declaring error and status log variables
 $passworderror = ""; //holds value is password error occurs
 $usernameerror = ""; //if name duplication occurs
@@ -34,14 +40,14 @@ if ($_POST) {
 		$sqlusername = mysqli_query($conn, "SELECT vendor_username FROM vendor_info WHERE vendor_username='$vendorusername' ");
 		$usernamecheck = mysqli_num_rows($sqlusername);
 		if ($usernamecheck >= 1) {
-			$usernameerror = " username '$vendorusername' has been taken by another user";
+			$usernameerror = " username <b>'$vendorusername'</b> has been taken by another user";
 			//echo $usernameerror;
 		} else {
 			//checking for email duplication
 			$sqlemail = mysqli_query($conn, "SELECT vendor_email FROM vendor_info WHERE vendor_email='$vendoremail' ");
 			$emailcheck = mysqli_num_rows($sqlemail);
 			if ($emailcheck >= 1) {
-				$emailerror = "$vendoremail has been used by another user";
+				$emailerror = " <b>'$vendoremail'</b> has been used by another user";
 			} else {
 				//inserting variables into the database
 				$sqlinsert = "INSERT INTO vendor_info( vendor_username, vendor_email, vendor_password) VALUES( '$vendorusername', '$vendoremail', '$vendorpassword')";

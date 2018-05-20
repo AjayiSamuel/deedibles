@@ -1,18 +1,5 @@
 <?php
 include("app/modules/vendor_register_process.php");
-if(!$vendorusername){
-  $vendorusername="";
-}
-if(!$vendoremail){
-  $vendoremail="";
-}
-if(!$vendorpassword){
-  $vendorpassword="";
-}
-if(!$vendorconfirmpassword){
-  $vendorconfirmpassword="";
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +54,7 @@ if(!$vendorconfirmpassword){
                     </div>
                   </div>
                   <!-- .form-header-->
-                  <p style="color:red; font-size:9px;"><?php echo $usernameerror; echo $passworderror; echo $emailerror;?> </p>
+                  <p style="color:red; font-size:11px;"><?php echo $usernameerror; echo $passworderror; echo $emailerror;?> </p>
                   <div class="form-body">
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Username</strong></div>

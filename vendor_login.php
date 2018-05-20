@@ -1,5 +1,12 @@
 <?php
 include("app/modules/vendor_login_process.php");
+
+// if(!$email){
+//   $email="";
+// }
+// if(!$password){
+//   $password="";
+// }
 ?>
 
 <!DOCTYPE html>
@@ -53,19 +60,19 @@ include("app/modules/vendor_login_process.php");
                     </div>
                   </div>
                   <!-- .form-header-->
-            
+                  <p style="color:red; font-size:11px;"><?php echo $loginerror;?> </p>
                   <div class="form-body">
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Email</strong></div>
                       <div class="mv-field">
-                        <input type="email" name="login_email" placeholder="enter your email" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input value="<?php echo $email?>" type="email" name="login_email" placeholder="enter your email" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 
                     <div class="mv-form-group">
                       <div class="mv-label"> <strong class="text-uppercase">Password</strong></div>
                       <div class="mv-field">
-                        <input type="password" name="login_password" placeholder="enter your password" class="mv-inputbox mv-inputbox-style-1"/>
+                        <input value="<?php echo $password?>" type="password" name="login_password" placeholder="enter your password" class="mv-inputbox mv-inputbox-style-1"/>
                       </div>
                     </div>
 

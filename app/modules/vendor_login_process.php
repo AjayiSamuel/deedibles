@@ -3,9 +3,12 @@ require 'vendor/autoload.php';
 
 use App\Database as DB;
 use App\Sessions;
+//initailizing variables
+$email = "";
+$password = "";
 
 Sessions::init();
-$error = "";
+$loginerror = "";
 if (isset($_POST['submit_login'])) {
 	//echo "passed <br>";
 	$email = $_POST['login_email'];
@@ -27,7 +30,7 @@ if (isset($_POST['submit_login'])) {
 		#$result = mysqli_connect($conn);
 		header("Location:vendor_profile.php");
 	} else {
-		$error2 = "username or password is invalid. <br>";
+		$loginerror = "<b>username</b> or <b>password</b> is invalid. <br>";
 		//echo $error2;
 	}
 	mysqli_close($conn);
