@@ -20,13 +20,13 @@ Sessions::init();
     $result = mysqli_query($conn, $query);
     $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 
-    $paginator = new Paginator($rows,"",2);
+    $paginator = new Paginator($rows,"",6);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>
-<?php echo ucfirst($category);?>
+  <?php echo ucfirst($category);?>
 	</title>
 	<meta charset="UTF-8">
 	<?php
