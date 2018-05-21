@@ -33,7 +33,18 @@ class Paginator{
 		/**
 		 * For PageUrl
 		 */
-		$this->urlPattern = "?page=(:num)";
+		if (count($_GET) == 1 || empty($_GET)){ 
+			$this->urlPattern = "?page=(:num)";
+		}else{
+			$newGet = array_filter($_GET,function($k) {
+				return $k != 'page';
+			}, ARRAY_FILTER_USE_KEY);
+			$getUrl = '';
+			foreach($newGet as $key => $value){
+				$getUrl .= "{$key}={$value}";
+			}
+			$this->urlPattern = "?$getUrl&page=(:num)";
+		}
 		$this->pageUrl = new PageUrl(count($items), $noOfItems, $_GET['page'], $this->urlPattern);
 	}
 	/**

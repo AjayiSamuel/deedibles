@@ -6,8 +6,11 @@ use App\Database as DB;
 use App\Paginator;
 
 Sessions::init();
+	$category = rawurldecode($_GET['category']);
+
+
 	$conn = DB::_db();
-	$query = "SELECT * FROM vendor_info";
+	$query = "SELECT * FROM vendor_info WHERE category = '$category'";
 
 	if (!$conn) {
 		$databaseerror = "could not connect to database";
@@ -17,14 +20,13 @@ Sessions::init();
     $result = mysqli_query($conn, $query);
     $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 
-    $paginator = new Paginator($rows,"",8);
-
+    $paginator = new Paginator($rows,"",2);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>
-
+<?php echo ucfirst($category);?>
 	</title>
 	<meta charset="UTF-8">
 	<?php
@@ -126,7 +128,7 @@ Sessions::init();
 
 
           <div class="mv-pagination-wrapper">
-            <div class="mv-pagination-style-1 has-count-post">
+          <div class="mv-pagination-style-1 has-count-post">
             <?php
             //No of items per page
               echo $paginator->noOfItems * $_GET['page'];
