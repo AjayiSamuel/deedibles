@@ -312,7 +312,8 @@ Sessions::init();
 			<div class="featured-main mv-filter-style-1">
 				<div class="filter-button mv-btn-group">
 					<div class="group-inner">
-						<button data-filter=".motor" class="mv-btn mv-btn-style-8 active">Cakes</button>
+						<button data-filter=".motor" class="mv-btn mv-btn-style-8 active">ALL</button>
+						<button data-filter=".motor" class="mv-btn mv-btn-style-8">Cakes</button>
 						<button data-filter=".helmet" class="mv-btn mv-btn-style-8">Chocolates</button>
 						<button data-filter=".boots" class="mv-btn mv-btn-style-8">Cocktails</button>
 						<button data-filter=".protection" class="mv-btn mv-btn-style-8">Cupcakes</button>
@@ -335,16 +336,19 @@ Sessions::init();
 								<div class="item-inner mv-effect-translate-1">
 									<div class="content-default">
 										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
+											<div class="thumb-inner mv-effect-relative">
+												<a href="product-detail.html" title="RST Full Zipped Sweatshirt">
+													<img src="images/demo/demo_300x400.png" alt="demo" class="mv-effect-item"/>
+												</a>
+												<a href="product-detail.html" title="RST Full Zipped Sweatshirt" class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs">
+													<span class="btn-inner">
 
+													</span>
+												</a>
 												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
+													<div class="message-inner">
+														
+													</div>
 												</div>
 											</div>
 										</div>
@@ -729,17 +733,34 @@ Sessions::init();
 
 										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
 											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
+												<div class="stars-wrapper empty-stars">
+													<span class="item-rate">
+													</span>
+													<span class="item-rate">
+
+													</span>
+													<span class="item-rate">
+
+													</span>
+													<span class="item-rate">
+													</span><span class="item-rate"></span>
 												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
+												<div class="stars-wrapper filled-stars">
+													<span class="item-rate">
+
+													</span>
+													<span class="item-rate">
+
+													</span>
+													<span class="item-rate">
+
+													</span>
+													<span class="item-rate">
+
+													</span>
+													<span class="item-rate">
+
+													</span>
 												</div>
 											</div>
 										</div>
@@ -749,11 +770,14 @@ Sessions::init();
 
 									<div class="content-main">
 										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
+											<div class="content-price">
+												<span class="new-price">$ 128.24</span>
+											</div>
+											<div class="content-desc">
+												<a href="product-detail.html" title="RST Full Zipped Sweatshirt" class="mv-overflow-ellipsis">
+													RST Full Zipped Sweatshirt
+												</a>
+											</div>
 										</div>
 									</div>
 
@@ -772,13 +796,15 @@ Sessions::init();
 								<div class="item-inner mv-effect-translate-1">
 									<div class="content-default">
 										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
+											<div class="thumb-inner mv-effect-relative">
+												<a href="product-detail.html" title="RST Full Zipped Sweatshirt">
+													<img src="images/demo/demo_300x400.png" alt="demo" class="mv-effect-item"/>
+												</a>
+												<a href="product-detail.html" title="RST Full Zipped Sweatshirt" class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs">
+													<span class="btn-inner">
+
+													</span>
+												</a>
 
 												<div class="content-message mv-message-style-1">
 													<div class="message-inner"></div>
@@ -788,12 +814,22 @@ Sessions::init();
 
 										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
 											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
+												<div class="stars-wrapper empty-stars"><span class="item-rate">
+
+												</span>
+												<span class="item-rate">
+
+												</span>
+												<span class="item-rate">
+
+												</span>
+												<span class="item-rate">
+
+												</span>
+												<span class="item-rate">
+
+												</span>
+											</div>
 												<div class="stars-wrapper filled-stars"><span
 															class="item-rate"></span><span
 															class="item-rate"></span><span
