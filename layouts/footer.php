@@ -101,18 +101,18 @@
                 </li>
                 <li><a href="#"><span class="menu-text">Categories <i class="menu-icon fa fa-angle-down"></i></span></a>
                   <ul class="dropdown-left">
-                  <li><a href="#">Cakes</a></li>
-                        <li><a href="#">Chocolates</a></li>
-                        <li><a href="#">Cocktails</a></li>
-                        <li><a href="#">Cupcakes</a></li>
-                        <li><a href="#">Dessert</a></li>
-                        <li><a href="#">Edible Arrangement</a></li>
-                        <li><a href="#">Edible Underwears</a></li>
-                        <li><a href="#">Fruit Trees</a></li>
-                        <li><a href="#">Gift Baskets</a></li>
-                        <li><a href="#">Ice cream bar</a></li>
-                        <li><a href="#">Small chops</a></li>
-                        <li><a href="#">Snacks</a></li>
+                  <li><a href="categories.php?cakes">Cakes</a></li>
+                        <li><a href="categories.php?chocolates">Chocolates</a></li>
+                        <li><a href="categories.php?cocktails">Cocktails</a></li>
+                        <li><a href="categories.php?cupcakes">Cupcakes</a></li>
+                        <li><a href="categories.php?dessert">Dessert</a></li>
+                        <li><a href="categories.php?edible_arrangements">Edible Arrangement</a></li>
+                        <li><a href="categories.php?edible_underwears">Edible Underwears</a></li>
+                        <li><a href="categories.php?fruit_trees">Fruit Trees</a></li>
+                        <li><a href="categories.php?gift_baskets">Gift Baskets</a></li>
+                        <li><a href="categories.php?ice_cream_bars">Ice cream bar</a></li>
+                        <li><a href="categories.php?small_chops">Small chops</a></li>
+                        <li><a href="categories.php?snacks">Snacks</a></li>
                   </ul>
                 </li>
                 <li><a href="vendor_profile.php"><span class="menu-text">Profile</span></a>

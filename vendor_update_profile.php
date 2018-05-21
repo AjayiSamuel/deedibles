@@ -126,16 +126,16 @@ include 'layouts/header.php';
                       <div class="mv-field">
 						<select name="category" placeholder="select your category" class="mv-select mv-select-style-1">
 							<option value="<?php echo $category?>"><?php echo $category?></option>
-							<option value="cake">cake</option>
-							<option value="chocolate">chocolate</option>
-							<option value="cocktail">cocktail</option>
-							<option value="cupcake">cupcake</option>
-							<option value="dessert">dessert</option>
-							<option value="edible arrangement">edible arrangement</option>
-							<option value="edible underwear">edible underwear</option>
-							<option value="fruit trees">Fruit trees</option>
-							<option value="gift basket">Gift basket</option>
-							<option value="ice Cream bar">Ice Cream bar</option>
+							<option value="cakes">cake</option>
+							<option value="chocolates">chocolate</option>
+							<option value="cocktails">cocktail</option>
+							<option value="cupcakes">cupcake</option>
+							<option value="desserts">dessert</option>
+							<option value="edible arrangements">edible arrangement</option>
+							<option value="edible underwears">edible underwear</option>
+							<option value="fruit treess">Fruit trees</option>
+							<option value="gift baskets">Gift basket</option>
+							<option value="ice Cream bars">Ice Cream bar</option>
 							<option value="small chops">small chops</option>
 							<option value="snacks">snacks</option>
 						</select>

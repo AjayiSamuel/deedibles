@@ -20,6 +20,49 @@ Sessions::init();
     $paginator = new Paginator($rows,"",8);
 
 ?>
+
+<?php
+
+if(isset($_GET['cakes'])){
+    $category = "cakes";
+}
+elseif(isset($_GET['chocolates'])){
+    $category = "chocolates";
+}
+elseif(isset($_GET['cocktails'])){
+    $category = "cocktails";
+}
+elseif(isset($_GET['cupcakes'])){
+    $category = "cupcakes";
+}
+elseif(isset($_GET['dessert'])){
+    $category = "dessert";
+}
+elseif(isset($_GET['edible_arrangements'])){
+    $category = "edible arrangements";
+}
+elseif(isset($_GET['edible_underwears'])){
+    $category = "edible underwears";
+}
+elseif(isset($_GET['fruit_trees'])){
+    $category = "fruit trees";
+}
+elseif(isset($_GET['gift_baskets'])){
+    $category = "gift baskets";
+}
+elseif(isset($_GET['ice_cream_bars'])){
+    $category = "ice cream bars";
+}
+elseif(isset($_GET['small_chops'])){
+    $category = "small chops";
+}
+elseif(isset($_GET['snacks'])){
+    $category = "snacks";
+}
+else {
+    header("Loction:index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +83,7 @@ Sessions::init();
         <div data-image-src="images/background/demo_bg_1920x1680.png" class="mv-banner-style-1 mv-bg-overlay-dark overlay-0-85 mv-parallax">
           <div class="page-name mv-caption-style-6">
             <div class="container">
-              <div class="mv-title-style-9"><span class="main">Search Results</span><img src="images/icon/icon_line_polygon_line.png" alt="icon" class="line"/></div>
+              <div class="mv-title-style-9"><span class="main"><?php echo $category?></span><img src="images/icon/icon_line_polygon_line.png" alt="icon" class="line"/></div>
             </div>
           </div>
         </div>
@@ -64,7 +107,7 @@ Sessions::init();
           <div class="row mv-list-product-wrapper mv-block-style-9">
             <div class="block-9-list mv-list-product">
 <?php foreach($paginator->getPagination()->getItems() as $vendor):?>
-<?php if($vendor['category'] == "cake"){continue;}?>
+<?php if($vendor['category'] != $category){continue;}?>
               <article class="col-xs-6 col-sm-4 item item-product-grid-2 post">
                 <div class="item-inner mv-effect-translate-1 mv-box-shadow-gray-1">
                   <div class="content-thumb">
