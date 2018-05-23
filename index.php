@@ -1,9 +1,31 @@
 <?php
 require 'vendor/autoload.php';
 
+use App\Database as DB;
 use App\Sessions;
-
 Sessions::init();
+$conn = DB::_db();
+
+$categories = ["Cakes",
+    "Chocolates",
+    "Cocktails",
+    "Cupcakes",
+    "Dessert",
+    "Edible Arrangement",
+    "Edible Underwears",
+    "Fruit Trees",
+    "Gift Baskets",
+    "Ice cream bar",
+    "Small chops",
+    "Snacks"];
+
+function getVendors($category, $limit = 5)
+{
+    global $conn;
+    $query = "SELECT * FROM vendor_info WHERE category='$category'";
+    $result = mysqli_query($conn, $query);
+    return mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,15 +36,15 @@ Sessions::init();
 
 	<!--Including links -->
 	<?php
-	include 'layouts/head.php';
-	?>
+include 'layouts/head.php';
+?>
 </head>
 <body>
 <div class="mv-site">
 	<!--Including header-->
 	<?php
-	include 'layouts/header.php';
-	?>
+include 'layouts/header.php';
+?>
 	<!--Sliding section begins-->
 	<section class="home-1-slideshow mv-wrap">
 		<div id="home-1-slideshow" class="mv-caroufredsel">
@@ -116,7 +138,7 @@ Sessions::init();
 									</a>
 									<a href="product-detail.html" title="Alpinestars GP Plus R Leather Motorcycle Jacket" class="">
 										<span class="btn-inner">
-					
+
 										</span>
 									</a>
 									<div class="content-message mv-message-style-1">
@@ -139,7 +161,7 @@ Sessions::init();
 										company name
 									</div>
 									<div class="content-desc">
-                      					<a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" 		class="mv-overflow-ellipsis">
+                      					<a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id']; ?>" 		class="mv-overflow-ellipsis">
                       						<i class="fa fa-tag"></i>
 											company's category
 										</a>
@@ -147,7 +169,7 @@ Sessions::init();
 									<div class="content-desc">
 										<a href="product-detail.html" title="" class="mv-overflow-ellipsis">
 											<i class="fa fa-user"></i>
-											company details 
+											company details
 										</a>
 									</div>
 								</div>
@@ -179,7 +201,7 @@ Sessions::init();
 									</a>
 									<a href="product-detail.html" title="Alpinestars GP Plus R Leather Motorcycle Jacket" class="">
 										<span class="btn-inner">
-					
+
 										</span>
 									</a>
 									<div class="content-message mv-message-style-1">
@@ -202,7 +224,7 @@ Sessions::init();
 										company name
 									</div>
 									<div class="content-desc">
-                      					<a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" 		class="mv-overflow-ellipsis">
+                      					<a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id']; ?>" 		class="mv-overflow-ellipsis">
                       						<i class="fa fa-tag"></i>
 											company's category
 										</a>
@@ -210,7 +232,7 @@ Sessions::init();
 									<div class="content-desc">
 										<a href="product-detail.html" title="" class="mv-overflow-ellipsis">
 											<i class="fa fa-user"></i>
-											company details 
+											company details
 										</a>
 									</div>
 								</div>
@@ -242,7 +264,7 @@ Sessions::init();
 									</a>
 									<a href="product-detail.html" title="Alpinestars GP Plus R Leather Motorcycle Jacket" class="">
 										<span class="btn-inner">
-					
+
 										</span>
 									</a>
 									<div class="content-message mv-message-style-1">
@@ -265,7 +287,7 @@ Sessions::init();
 										company name
 									</div>
 									<div class="content-desc">
-                      					<a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id'];?>" 		class="mv-overflow-ellipsis">
+                      					<a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id']; ?>" 		class="mv-overflow-ellipsis">
                       						<i class="fa fa-tag"></i>
 											company's category
 										</a>
@@ -273,7 +295,7 @@ Sessions::init();
 									<div class="content-desc">
 										<a href="product-detail.html" title="" class="mv-overflow-ellipsis">
 											<i class="fa fa-user"></i>
-											company details 
+											company details
 										</a>
 									</div>
 								</div>
@@ -312,18 +334,9 @@ Sessions::init();
 			<div class="featured-main mv-filter-style-1">
 				<div class="filter-button mv-btn-group">
 					<div class="group-inner">
-						<button data-filter=".motor" class="mv-btn mv-btn-style-8 active">Cakes</button>
-						<button data-filter=".helmet" class="mv-btn mv-btn-style-8">Chocolates</button>
-						<button data-filter=".boots" class="mv-btn mv-btn-style-8">Cocktails</button>
-						<button data-filter=".protection" class="mv-btn mv-btn-style-8">Cupcakes</button>
-						<button data-filter=".gear" class="mv-btn mv-btn-style-8">Dessert</button>
-						<button data-filter=".tires" class="mv-btn mv-btn-style-8">Edible Arrangement</button>
-						<button data-filter=".protection" class="mv-btn mv-btn-style-8">Edible Underwears</button>
-						<button data-filter=".gear" class="mv-btn mv-btn-style-8">Fruit Trees</button>
-						<button data-filter=".tires" class="mv-btn mv-btn-style-8">Gift Baskets</button>
-						<button data-filter=".protection" class="mv-btn mv-btn-style-8">Ice cream bar</button>
-						<button data-filter=".gear" class="mv-btn mv-btn-style-8">Small chops</button>
-						<button data-filter=".tires" class="mv-btn mv-btn-style-8">Snacks</button>
+						<?php foreach ($categories as $key => $category): ?>
+						<button data-filter=".<?php echo str_replace(" ", "-", $category); ?>" class="mv-btn mv-btn-style-8 <?php echo $key == 0 ? 'active' : ''; ?>"><?php echo $category; ?></button>
+<?php endforeach;?>
 					</div>
 				</div>
 				<!-- .filter-button-->
@@ -331,894 +344,53 @@ Sessions::init();
 				<div class="row filter-list-warpper">
 					<div class="filter-list mv-block-style-2">
 						<div class="block-2-list">
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item motor">
+						<?php foreach ($categories as $category): ?>
+						<?php foreach (getVendors(strtolower($category)) as $vendor): ?>
+							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item <?php echo str_replace(" ", "-", $category); ?>">
 								<div class="item-inner mv-effect-translate-1">
 									<div class="content-default">
 										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
+										<div class="thumb-inner mv-effect-relative">
+                      <a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id']; ?>" title="<?php echo $vendor['company_name']; ?>">
+                        <img src="<?php echo $vendor['logo']; ?>" alt="<?php echo $vendor['company_name']; ?>  profile image" class="mv-effect-item"/>
+                      </a>
+                      <a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id']; ?>" title="<?php echo $vendor['company_name']; ?>" >
+                        <!--
+                          class responsible for plus sign on image in above <a> tag
+                          class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"
+                        -->
+                      <span class="btn-inner"></span>
+                      </a>
+                    </div>
 										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
 									</div>
 
 									<div class="content-main">
 										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
+										<div class="content-price">
+                      <span class="new-price"><?php echo $vendor['company_name'];?>
+                      </span>
+                    </div>
+					<div class="content-desc">
+                      <span class="new-price">
+                        <i class="fa fa-circle"></i>
+                        <?php echo $vendor['company_description'];?>
+                      </span>
+                    </div>
 										</div>
 									</div>
 
 									<div class="content-hover">
 										<div class="content-button mv-btn-group text-center">
 											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
+											<a href="vendor_profile_view.php?vendor_id=<?php echo $vendor['id']; ?>" class="mv-btn mv-btn-style-1 responsive-btn-1-type-1 btn-compare"><span class="btn-inner"><i class="btn-icon fa fa-user"></i><span class="btn-text">view</span></span></a>
 											</div>
 										</div>
 									</div>
 								</div>
 							</article>
-							<!-- .post-->
-
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item motor">
-								<div class="item-inner mv-effect-translate-1">
-									<div class="content-default">
-										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="Rev'it Cyclone Waterproof Jacket - Neon Yellow"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="Rev'it Cyclone Waterproof Jacket - Neon Yellow"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
-										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-
-									<div class="content-main">
-										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="Rev'it Cyclone Waterproof Jacket - Neon Yellow"
-											                             class="mv-overflow-ellipsis">Rev'it Cyclone
-													Waterproof Jacket - Neon Yellow</a></div>
-										</div>
-									</div>
-
-									<div class="content-hover">
-										<div class="content-button mv-btn-group text-center">
-											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
-							<!-- .post-->
-
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item motor">
-								<div class="item-inner mv-effect-translate-1">
-									<div class="content-default">
-										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
-										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-
-									<div class="content-main">
-										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
-										</div>
-									</div>
-
-									<div class="content-hover">
-										<div class="content-button mv-btn-group text-center">
-											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
-							<!-- .post-->
-
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item motor">
-								<div class="item-inner mv-effect-translate-1">
-									<div class="content-default">
-										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
-										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-
-									<div class="content-main">
-										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
-										</div>
-									</div>
-
-									<div class="content-hover">
-										<div class="content-button mv-btn-group text-center">
-											<div class="group-inner">
-												<!--Deleted  Contents in hover -->
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
-							<!-- .post-->
-
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item helmet">
-								<div class="item-inner mv-effect-translate-1">
-									<div class="content-default">
-										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
-										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-
-									<div class="content-main">
-										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
-										</div>
-									</div>
-
-									<div class="content-hover">
-										<div class="content-button mv-btn-group text-center">
-											<div class="group-inner">
-												<!--Deleted  Contents in hover -->
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
-							<!-- .post-->
-
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item boots">
-								<div class="item-inner mv-effect-translate-1">
-									<div class="content-default">
-										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
-										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-
-									<div class="content-main">
-										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
-										</div>
-									</div>
-
-									<div class="content-hover">
-										<div class="content-button mv-btn-group text-center">
-											<div class="group-inner">
-												<!--Deleted  Contents in hover -->
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
-							<!-- .post-->
-
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item boots">
-								<div class="item-inner mv-effect-translate-1">
-									<div class="content-default">
-										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
-										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-
-									<div class="content-main">
-										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
-										</div>
-									</div>
-
-									<div class="content-hover">
-										<div class="content-button mv-btn-group text-center">
-											<div class="group-inner">
-												<!--Deleted  Contents in hover -->
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
-							<!-- .post-->
-
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item boots">
-								<div class="item-inner mv-effect-translate-1">
-									<div class="content-default">
-										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
-										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-
-									<div class="content-main">
-										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
-										</div>
-									</div>
-
-									<div class="content-hover">
-										<div class="content-button mv-btn-group text-center">
-											<div class="group-inner">
-												<!--Deleted  Contents in hover -->
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
-							<!-- .post-->
-
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item boots">
-								<div class="item-inner mv-effect-translate-1">
-									<div class="content-default">
-										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
-										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-
-									<div class="content-main">
-										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
-										</div>
-									</div>
-
-									<div class="content-hover">
-										<div class="content-button mv-btn-group text-center">
-											<div class="group-inner">
-												<!--Deleted  Contents in hover -->
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
-							<!-- .post-->
-
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item boots">
-								<div class="item-inner mv-effect-translate-1">
-									<div class="content-default">
-										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
-										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-
-									<div class="content-main">
-										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
-										</div>
-									</div>
-
-									<div class="content-hover">
-										<div class="content-button mv-btn-group text-center">
-											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
-							<!-- .post-->
-
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item protection">
-								<div class="item-inner mv-effect-translate-1">
-									<div class="content-default">
-										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
-										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-
-									<div class="content-main">
-										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
-										</div>
-									</div>
-
-									<div class="content-hover">
-										<div class="content-button mv-btn-group text-center">
-											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
-							<!-- .post-->
-
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item protection">
-								<div class="item-inner mv-effect-translate-1">
-									<div class="content-default">
-										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
-										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-
-									<div class="content-main">
-										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
-										</div>
-									</div>
-
-									<div class="content-hover">
-										<div class="content-button mv-btn-group text-center">
-											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
-							<!-- .post-->
-
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item gear">
-								<div class="item-inner mv-effect-translate-1">
-									<div class="content-default">
-										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
-										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-
-									<div class="content-main">
-										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
-										</div>
-									</div>
-
-									<div class="content-hover">
-										<div class="content-button mv-btn-group text-center">
-											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
-							<!-- .post-->
-
-							<article class="col-xs-6 col-sm-4 col-md-3 item post filter-item tires">
-								<div class="item-inner mv-effect-translate-1">
-									<div class="content-default">
-										<div class="content-thumb">
-											<div class="thumb-inner mv-effect-relative"><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"><img
-															src="images/demo/demo_300x400.png" alt="demo"
-															class="mv-effect-item"/></a><a href="product-detail.html"
-											                                               title="RST Full Zipped Sweatshirt"
-											                                               class="mv-btn mv-btn-style-25 btn-readmore-plus hidden-xs"><span
-															class="btn-inner"></span></a>
-
-												<div class="content-message mv-message-style-1">
-													<div class="message-inner"></div>
-												</div>
-											</div>
-										</div>
-
-										<div data-rate="true" data-score="5.0" class="content-rate mv-rate text-center">
-											<div class="rate-inner mv-f-14 text-left">
-												<div class="stars-wrapper empty-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-												<div class="stars-wrapper filled-stars"><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span
-															class="item-rate"></span><span class="item-rate"></span>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-
-									<div class="content-main">
-										<div class="content-text">
-											<div class="content-price"><span class="new-price">$ 128.24</span></div>
-											<div class="content-desc"><a href="product-detail.html"
-											                             title="RST Full Zipped Sweatshirt"
-											                             class="mv-overflow-ellipsis">RST Full Zipped
-													Sweatshirt</a></div>
-										</div>
-									</div>
-
-									<div class="content-hover">
-										<div class="content-button mv-btn-group text-center">
-											<div class="group-inner">
-												<button type="button" title="Add To Wishlist"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-wishlist">
-													<i class="fa fa-heart-o"></i></button>
-												<button type="button" title="Compare"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-compare">
-													<i class="fa fa-signal"></i></button>
-												<button type="button" title="Add To Cart"
-												        class="mv-btn mv-btn-style-3 responsive-btn-3-type-1 btn-add-to-cart">
-													<i class="fa fa-cart-plus"></i></button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
+<?php endforeach;?>
+							<?php endforeach;?>
 						</div>
 					</div>
 				</div>
@@ -1681,8 +853,8 @@ Sessions::init();
 	<!-- .mv-newsletter-style-2-->
 	<!-- .footer-->
 	<?php
-	include 'layouts/footer.php';
-	?>
+include 'layouts/footer.php';
+?>
 	<!-- .footer-->
 </body>
 </html>
